@@ -12,20 +12,36 @@ import java.util.Map;
 @RestController
 public class CodeController {
 
+    String code = "public static void main(String[] args) {" +
+            "SpringApplication.run(CodeSharingPlatform.class, args);}";
+
+
+//    @GetMapping("/code")
+//    public ModelAndView getHTML(){
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("code.html");
+//
+//        return modelAndView;
+//    }
 
     @GetMapping("/code")
-    public ModelAndView getHTML(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("code.html");
+    public String getHTML(){
+        String response = "<html>\n" +
+                "<head>\n" +
+                "<title>" + "Code" + "</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<pre>" + code + "</pre>\n" +
+                "</body>\n" +
+                "</html>";
 
-        return modelAndView;
+        return response;
     }
 
 
     @GetMapping("/api/code")
     public ResponseEntity getJSON(){
-        String code = "public static void main(String[] args) {" +
-                "SpringApplication.run(CodeSharingPlatform.class, args);}";
+
         return new ResponseEntity(Map.of("code", code), HttpStatus.OK);
     }
 
