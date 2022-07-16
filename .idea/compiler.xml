@@ -11,6 +11,20 @@
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-Theory.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDate-10_days_before.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDate-30_years_before_and_after.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDate-Convert_numbers_to_days.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDate-Print_dates_of_a_year_with_an_offset.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDate-Theory.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDateTime-Add_11_hours_and_print_the_date.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalDateTime-Theory.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-LocalTime_constants.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Millisecond_precision.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Representing_the_same_time.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Return_time_without_seconds.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Same_time.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-LocalTime-Theory.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-toString__-Theory.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-toString__-Time_as_a_string.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-toString__-Users_as_strings.main" target="11" />

@@ -1,24 +1,5 @@
 type: edu
 files:
-- name: src/platform/CodeSharingPlatform.java
-  visible: true
-  text: |
-    package platform;
-
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-    import org.springframework.web.bind.annotation.RestController;
-
-    @SpringBootApplication
-    @RestController
-    public class CodeSharingPlatform {
-
-        public static void main(String[] args) {
-            SpringApplication.run(CodeSharingPlatform.class, args);
-        }
-
-    }
-  learner_created: false
 - name: build.gradle
   visible: true
   text: |-
@@ -49,13 +30,6 @@ files:
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
         implementation 'org.springframework.boot:spring-boot-starter-web'
     }
-  learner_created: false
-- name: src/resources/application.properties
-  visible: true
-  text: |
-    server.port=8889
-    management.endpoints.web.exposure.include=*
-    management.endpoint.shutdown.enabled=true
   learner_created: false
 - name: test/CodeSharingPlatformTest.java
   visible: false
@@ -251,6 +225,120 @@ files:
         }
     }
   learner_created: false
+- name: src/resources/application.properties
+  visible: true
+  text: |
+    server.port=8889
+    management.endpoints.web.exposure.include=*
+    management.endpoint.shutdown.enabled=true
+  learner_created: false
+- name: src/platform/Code.java
+  visible: true
+  learner_created: true
+- name: src/platform/CodeSharingPlatform.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @SpringBootApplication
+    @RestController
+    public class CodeSharingPlatform {
+
+        public static void main(String[] args) {
+            SpringApplication.run(CodeSharingPlatform.class, args);
+        }
+
+    }
+  learner_created: false
+- name: src/resources/templates/index.html
+  visible: true
+  learner_created: true
+- name: src/resources/templates/form.html
+  visible: true
+  learner_created: true
+- name: src/resources/templates/code.html
+  visible: true
+  text: |-
+    <html>
+    <head>
+        <title>Code</title>
+    </head>
+    <body>
+    <pre>public static void main(String[] args) {SpringApplication.run(CodeSharingPlatform.class, args);}</pre>
+    </body>
+    </html>
+  learner_created: true
+- name: src/resources/templates/script.js
+  visible: true
+  learner_created: true
+- name: src/platform/CodeRESTController.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RestController;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.web.servlet.ModelAndView;
+
+    import java.time.LocalTime;
+    import java.util.Map;
+
+    @RestController
+    public class CodeController {
+
+        String code = "public static void main(String[] args) {" +
+                "SpringApplication.run(CodeSharingPlatform.class, args);}";
+
+
+    //    @GetMapping("/code")
+    //    public ModelAndView getHTML(){
+    //        ModelAndView modelAndView = new ModelAndView();
+    //        modelAndView.setViewName("code.html");
+    //
+    //        return modelAndView;
+    //    }
+
+        @GetMapping("/code")
+        public String getHTML(){
+            String response = "<html>\n" +
+                    "<head>\n" +
+                    "<title>" + "Code" + "</title>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "<pre>" + code + "</pre>\n" +
+                    "</body>\n" +
+                    "</html>";
+
+            return response;
+        }
+
+
+        @GetMapping("/api/code")
+        public ResponseEntity getJSON(){
+
+            return new ResponseEntity(Map.of("code", code), HttpStatus.OK);
+
+        }
+
+
+
+
+
+    }
+  learner_created: true
+- name: src/platform/CodeHTMLController.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/130/stages/693/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 16 Jul 2022 14:50:46 UTC
+record: 2

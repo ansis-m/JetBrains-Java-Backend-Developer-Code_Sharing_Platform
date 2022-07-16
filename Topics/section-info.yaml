@@ -1,3 +1,6 @@
 content:
 - toString()
 - Iterating over arrays
+- LocalTime
+- LocalDate
+- LocalDateTime

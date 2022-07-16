@@ -1,0 +1,8 @@
+content:
+- Theory
+- LocalTime constants
+- Same time
+- Representing the same time
+- Millisecond precision
+- Seconds since start of a day
+- Return time without seconds
