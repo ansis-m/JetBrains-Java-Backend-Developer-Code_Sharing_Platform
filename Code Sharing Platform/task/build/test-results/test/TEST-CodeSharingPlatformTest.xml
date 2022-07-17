@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CodeSharingPlatformTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-16T14:50:43" hostname="LAPTOP-VBFHQFG2" time="3.018">
+<testsuite name="CodeSharingPlatformTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-17T10:51:55" hostname="LAPTOP-VBFHQFG2" time="3.455">
   <properties/>
-  <testcase name="start" classname="CodeSharingPlatformTest" time="3.018"/>
+  <testcase name="start" classname="CodeSharingPlatformTest" time="3.455"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,20 +13,20 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2022-07-16 17:50:43.498  INFO 15000 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 15000 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
-2022-07-16 17:50:43.498  INFO 15000 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
-2022-07-16 17:50:44.519  INFO 15000 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2022-07-16 17:50:44.535  INFO 15000 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-16 17:50:44.535  INFO 15000 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2022-07-16 17:50:44.629  INFO 15000 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-16 17:50:44.629  INFO 15000 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1101 ms
-2022-07-16 17:50:44.996  INFO 15000 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-07-16 17:50:45.240  INFO 15000 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-07-16 17:50:45.272  INFO 15000 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-2022-07-16 17:50:45.298  INFO 15000 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 2.093 seconds (JVM running for 2.685)
-2022-07-16 17:50:45.526  INFO 15000 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-16 17:50:45.526  INFO 15000 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-16 17:50:45.526  INFO 15000 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-07-17 13:51:55.614  INFO 3924 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 3924 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
+2022-07-17 13:51:55.617  INFO 3924 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+2022-07-17 13:51:56.649  INFO 3924 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-17 13:51:56.660  INFO 3924 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-17 13:51:56.660  INFO 3924 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-07-17 13:51:56.742  INFO 3924 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-17 13:51:56.743  INFO 3924 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
+2022-07-17 13:51:57.093  INFO 3924 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-17 13:51:57.420  INFO 3924 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-17 13:51:57.450  INFO 3924 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2022-07-17 13:51:57.470  INFO 3924 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 2.198 seconds (JVM running for 2.768)
+2022-07-17 13:51:57.707  INFO 3924 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 13:51:57.707  INFO 3924 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-17 13:51:57.708  INFO 3924 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ?[1;31m
 Start test 2?[0m
 ?[1;31m
@@ -49,6 +49,92 @@ Start test 10?[0m
 Start test 11?[0m
 ?[1;31m
 Start test 12?[0m
+?[1;31m
+Start test 13?[0m
+?[1;31m
+Start test 14?[0m
+?[1;31m
+Start test 15?[0m
+?[1;31m
+Start test 16?[0m
+?[1;31m
+Start test 17?[0m
+?[1;31m
+Start test 18?[0m
+?[1;31m
+Start test 19?[0m
+?[1;31m
+Start test 20?[0m
+?[1;31m
+Start test 21?[0m
+?[1;31m
+Start test 22?[0m
+?[1;31m
+Start test 23?[0m
+?[1;31m
+Start test 24?[0m
+?[1;31m
+Start test 25?[0m
+?[1;31m
+Start test 26?[0m
+?[1;31m
+Start test 27?[0m
+?[1;31m
+Start test 28?[0m
+?[1;31m
+Start test 29?[0m
+?[1;31m
+Start test 30?[0m
+?[1;31m
+Start test 31?[0m
+?[1;31m
+Start test 32?[0m
+?[1;31m
+Start test 33?[0m
+?[1;31m
+Start test 34?[0m
+?[1;31m
+Start test 35?[0m
+?[1;31m
+Start test 36?[0m
+?[1;31m
+Start test 37?[0m
+?[1;31m
+Start test 38?[0m
+?[1;31m
+Start test 39?[0m
+?[1;31m
+Start test 40?[0m
+?[1;31m
+Start test 41?[0m
+?[1;31m
+Start test 42?[0m
+?[1;31m
+Start test 43?[0m
+?[1;31m
+Start test 44?[0m
+?[1;31m
+Start test 45?[0m
+?[1;31m
+Start test 46?[0m
+?[1;31m
+Start test 47?[0m
+?[1;31m
+Start test 48?[0m
+?[1;31m
+Start test 49?[0m
+?[1;31m
+Start test 50?[0m
+?[1;31m
+Start test 51?[0m
+?[1;31m
+Start test 52?[0m
+?[1;31m
+Start test 53?[0m
+?[1;31m
+Start test 54?[0m
+?[1;31m
+Start test 55?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

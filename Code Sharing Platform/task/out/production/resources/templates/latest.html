@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title> Latest </title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Code </th>
+        <th> Date </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="code : ${latest}">
+        <td><pre th:text="${code.getCode()}"> Code </pre></td>
+        <td><span th:text="${code.getDate()}"> Date </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

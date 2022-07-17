@@ -461,27 +461,6 @@ files:
         }
     }
   learner_created: true
-- name: src/resources/templates/script.js
-  visible: true
-  text: |-
-    function send() {
-        console.log("inside JS");
-        let object = {
-            "code": document.getElementById("code_snippet").value
-        };
-
-        let json = JSON.stringify(object);
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", '/api/code/new', false)
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        xhr.send(json);
-
-        if (xhr.status == 200) {
-          alert("Success!");
-        }
-    }
-  learner_created: true
 - name: src/platform/CodeRESTController.java
   visible: true
   text: |
@@ -517,47 +496,6 @@ files:
         }
     }
   learner_created: true
-- name: src/platform/Code.java
-  visible: true
-  text: |
-    package platform;
-
-    import org.springframework.stereotype.Component;
-
-    import java.time.LocalDate;
-
-    @Component
-    public class Code {
-
-        private String code;
-        private LocalDate date;
-        private final String initialCode = "public static void main(String[] args) {" +
-                "SpringApplication.run(CodeSharingPlatform.class, args);}";
-
-        public Code(String code) {
-            this.code = code;
-            date = LocalDate.now();
-        }
-
-        public Code() {
-            code = initialCode;
-            date = LocalDate.now();
-        }
-        public void updateCode(Code newCode){
-            code = newCode.getCode();
-            date = newCode.getDate();
-        }
-
-        public LocalDate getDate() {
-            return date;
-        }
-
-        public String getCode() {
-            return code;
-        }
-
-    }
-  learner_created: true
 - name: src/resources/templates/form.html
   visible: true
   text: |-
@@ -591,6 +529,39 @@ files:
     </body>
     </html>
   learner_created: true
-feedback_link: https://hyperskill.org/projects/130/stages/694/implement#comment
-status: Unchecked
+- name: src/platform/Code.java
+  visible: true
+  learner_created: true
+- name: src/resources/templates/error.html
+  visible: true
+  learner_created: true
+- name: src/resources/templates/mscript.js
+  visible: true
+  text: |-
+    function send() {
+        console.log("inside JS");
+        let object = {
+            "code": document.getElementById("code_snippet").value
+        };
+
+        let json = JSON.stringify(object);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", '/api/code/new', false)
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+
+        if (xhr.status == 200) {
+          alert("Success!");
+        }
+    }
+  learner_created: true
+- name: src/platform/CodeRepository.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11029#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 17 Jul 2022 10:51:58 UTC
 record: -1

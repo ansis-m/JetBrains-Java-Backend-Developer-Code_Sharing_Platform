@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="17">
+    <bytecodeTargetLevel target="12">
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-classes-java.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-annotationProcessor-java.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-headers-java.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-reports-tests.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-test-results.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-tmp.main" target="11" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-out.main" target="11" />
       <module name="Code_Sharing_Platform.Code_Sharing_Platform-task.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-Theory.main" target="11" />
