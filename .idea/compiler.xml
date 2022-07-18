@@ -2,14 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="12">
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-classes-java.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-annotationProcessor-java.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-headers-java.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-reports-tests.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-test-results.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-tmp.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-out.main" target="11" />
-      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task.main" target="11" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-classes-java" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-classes-java.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-annotationProcessor-java" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-annotationProcessor-java.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-headers-java" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-generated-sources-headers-java.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-reports-tests" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-reports-tests.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-test-results" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-test-results.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-tmp" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-build-tmp.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-out" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task-out.test" target="17" />
+      <module name="Code_Sharing_Platform.Code_Sharing_Platform-task.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Check_for_null" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Check_for_null.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Class_type_parameters" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Class_type_parameters.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Print_content" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Print_content.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-The_usage_of_parameters" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-The_usage_of_parameters.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Theory" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Generic_methods-Theory.test" target="17" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-Iterating_over_arrays-Theory.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-LocalDate-10_days_before.main" target="11" />
@@ -26,10 +44,25 @@
       <module name="Code_Sharing_Platform.Topics-LocalTime-Same_time.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-LocalTime-Theory.main" target="11" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Check_an_Optional_value" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Check_an_Optional_value.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Create_an_Optional_value" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Create_an_Optional_value.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Sum_up_optional_values" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Sum_up_optional_values.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-The_address_book" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-The_address_book.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Theory" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Optional-Theory.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Standard_functional_interfaces-Ternary_operator" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Standard_functional_interfaces-Ternary_operator.test" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Standard_functional_interfaces-Theory" target="17" />
+      <module name="Code_Sharing_Platform.Topics-Standard_functional_interfaces-Theory.test" target="17" />
       <module name="Code_Sharing_Platform.Topics-toString__-Theory.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-toString__-Time_as_a_string.main" target="11" />
       <module name="Code_Sharing_Platform.Topics-toString__-Users_as_strings.main" target="11" />
-      <module name="Code_Sharing_Platform.util.main" target="11" />
+      <module name="Code_Sharing_Platform.util" target="17" />
+      <module name="Code_Sharing_Platform.util.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
