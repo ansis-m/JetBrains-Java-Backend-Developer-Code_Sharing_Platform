@@ -474,6 +474,411 @@ files:
         }
     }
   learner_created: false
+- name: src/resources/templates/index.html
+  visible: true
+  text: |-
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title> Create </title>
+    </head>
+    <body>
+    Index
+    </body>
+    </html>
+  learner_created: true
+- name: src/platform/CodeRepository.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.stereotype.Component;
+
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    import java.util.Collections;
+    import java.util.List;
+
+    @Component
+    public class CodeRepository {
+
+        private ArrayList<Code> codeRepository;
+
+        public CodeRepository() {
+            codeRepository = new ArrayList<>();
+        }
+
+        public int size() {
+            return codeRepository.size();
+        }
+
+        public void update(Code newCode){
+            codeRepository.add(newCode);
+        }
+
+        public Code get(int i){
+            return codeRepository.get(i - 1);
+        }
+
+        public List<Code> getLatest(){
+
+            int size = codeRepository.size();
+            List<Code> latest = (List<Code>) codeRepository.clone();
+            if (size >= 11) {
+                latest = latest.subList(size - 10, size);
+            }
+            Collections.reverse(latest);
+            return latest;
+        }
+    }
+  learner_created: true
+- name: src/resources/templates/mscript.js
+  visible: true
+  text: |-
+    function send() {
+        console.log("inside JS");
+        let object = {
+            "code": document.getElementById("code_snippet").value
+        };
+
+        let json = JSON.stringify(object);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", '/api/code/new', false);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+
+        if (xhr.status == 200) {
+          alert("Success!");
+        }
+    }
+  learner_created: true
+- name: src/resources/templates/form.html
+  visible: true
+  text: |-
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title> Create </title>
+        <script type="text/javascript" th:src="@{/mscript.js}"></script>
+        <script >function send() {
+        console.log("inside JS");
+        let object = {
+            "code": document.getElementById("code_snippet").value
+        };
+
+        let json = JSON.stringify(object);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", '/api/code/new', false);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+
+        if (xhr.status == 200) {
+          alert("Success!");
+        }
+    }</script>
+    </head>
+    <body>
+
+    <form>
+        <br>
+        <textarea rows="4" cols="50" id="code_snippet" name="comment">Enter your Code...</textarea>
+        <br>
+        <button id="send_snippet" type="submit" onclick="send()">Submit</button>
+        </form>
+    </body>
+    </html>
+  learner_created: true
+- name: src/platform/CodeDAOimplementation.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.hibernate.Session;
+    import org.hibernate.query.Query;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.stereotype.Repository;
+    import org.springframework.transaction.annotation.Transactional;
+
+    import javax.persistence.EntityManager;
+    import java.util.List;
+
+    @Repository
+    public class CodeDAOimplementation implements CodeDAO{
+
+
+        private EntityManager entityManager;
+
+        @Autowired
+        public CodeDAOimplementation(EntityManager entityManager) {
+            this.entityManager = entityManager;
+        }
+
+        @Override
+        @Transactional
+        public List<Code> getAll() {
+
+            // get the session
+            Session session = entityManager.unwrap(Session.class);
+            // create a query
+            Query<Code> query = session.createQuery("from code", Code.class);
+            // execute a query
+            List<Code> codeList = query.getResultList();
+            // return results
+            return codeList;
+
+        }
+    }
+  learner_created: true
+- name: src/resources/templates/error.html
+  visible: true
+  text: |-
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title> Error </title>
+    </head>
+    <body>
+    <h1> Bad Request!!! </h1>
+    <p> requested code with id out of range or bad format </p>
+    </body>
+    </html>
+  learner_created: true
+- name: src/platform/CodeHTMLController.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.Model;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.PathVariable;
+
+    @Controller
+    public class CodeHTMLController {
+
+        @Autowired
+        private CodeRepository codeRepository;
+
+        @GetMapping("/code/{id}")
+        public String codeForm(@PathVariable String id, Model model){
+
+            if(id.equals("new"))
+                return "form";
+            else if(id.equals("latest")){
+                model.addAttribute("latest", codeRepository.getLatest());
+                return "latest";
+            }
+            else {
+                try{
+                    int i = Integer.parseInt(id);
+                    model.addAttribute("code", codeRepository.get(i));
+                    return "code";
+                }
+                catch (Exception e){
+                    System.out.println("bad code id at /code/{id}!");
+                    return "error";
+                }
+            }
+        }
+    }
+  learner_created: true
+- name: src/platform/CodeRESTController.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
+
+    import java.util.Collections;
+    import java.util.List;
+    import java.util.Map;
+
+    @RestController
+    public class CodeRESTController {
+
+        private CodeRepository codeRepository;
+
+        private CodeDAO codeDAO;
+
+        @Autowired
+        public CodeRESTController(CodeRepository codeRepository, CodeDAO codeDAO){
+            this.codeRepository = codeRepository;
+            this.codeDAO = codeDAO;
+        }
+
+        @GetMapping("/api/code/{id}")
+        public ResponseEntity getJSON(@PathVariable String id){
+
+            if(id.equals("latest")) {
+                List<Code> result = codeRepository.getLatest();
+                return new ResponseEntity(result, HttpStatus.OK);
+            }
+            else {
+                try {
+                    int i = Integer.parseInt(id);
+                    Code code = codeRepository.get(i);
+                    return new ResponseEntity(code, HttpStatus.OK);
+
+                }
+                catch (Exception e) {
+                    System.out.println("error at /api/code/{id}, bad id: " + id);
+                    return new ResponseEntity(HttpStatus.BAD_REQUEST);
+                }
+            }
+        }
+
+        @PostMapping ("api/code/new")
+        public ResponseEntity updateCode(@RequestBody Code newCode){
+
+            codeRepository.update(newCode);
+            return new ResponseEntity(Map.of("id", String.valueOf(codeRepository.size())), HttpStatus.OK);
+        }
+    }
+  learner_created: true
+- name: src/platform/CodeDAO.java
+  visible: true
+  text: |
+    package platform;
+
+    import java.util.List;
+
+    public interface CodeDAO {
+
+        public List<Code> getAll();
+    }
+  learner_created: true
+- name: src/resources/templates/code.html
+  visible: true
+  text: |-
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <title> Code </title>
+        <link rel="stylesheet"
+              href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+     <span id="load_date" th:text="${code.getDate()}"/>
+     <pre><code><pre id="code_snippet" th:text="${code.getCode()}"/> </code></pre>
+    </body>
+    </html>
+  learner_created: true
+- name: src/platform/Code.java
+  visible: true
+  text: |
+    package platform;
+
+    import org.springframework.context.annotation.Scope;
+    import org.springframework.stereotype.Component;
+
+    import javax.persistence.*;
+    import java.time.LocalDate;
+
+    @Entity
+    @Table(name="code")
+    public class Code{
+
+        @Id
+        @GeneratedValue(strategy= GenerationType.IDENTITY)
+        private long id;
+
+        @Column
+        private String code;
+
+        @Column
+        private LocalDate date;
+
+        public Code() {
+        }
+
+        public Code(String code) {
+            this.code = code;
+            date = LocalDate.now();
+        }
+
+        public void setCode(String code) {
+            this.code = code;
+        }
+
+        public void setDate(LocalDate date) {
+            this.date = date;
+        }
+
+        public LocalDate getDate() {
+            return date;
+        }
+
+        public String getCode() {
+            return code;
+        }
+
+        @Override
+        public String toString() {
+            return "Code{" +
+                    "id=" + id +
+                    ", code='" + code + '\'' +
+                    ", date=" + date +
+                    '}';
+        }
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11030#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #4
+
+    GET /code/1 should contain 1 &lt;code&gt; element, found: 0
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    .   ____          _            __ _ _
+     /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+    ( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+      &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+     =========|_|==============|___/=/_/_/_/
+     :: Spring Boot ::                (v2.5.6)
+
+    2022-07-20 17:28:03.292  INFO 2360 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 2360 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
+    2022-07-20 17:28:03.295  INFO 2360 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+    2022-07-20 17:28:04.118  INFO 2360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+    2022-07-20 17:28:04.132  INFO 2360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+    2022-07-20 17:28:04.638  INFO 2360 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+    2022-07-20 17:28:04.648  INFO 2360 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2022-07-20 17:28:04.648  INFO 2360 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+    2022-07-20 17:28:04.733  INFO 2360 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2022-07-20 17:28:04.733  INFO 2360 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+    2022-07-20 17:28:04.845  INFO 2360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+    2022-07-20 17:28:05.020  INFO 2360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+    2022-07-20 17:28:05.026  INFO 2360 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at &#39;/h2-console&#39;. Database available at &#39;jdbc:h2:file:../snippets&#39;
+    2022-07-20 17:28:05.219  INFO 2360 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+    2022-07-20 17:28:05.272  INFO 2360 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+    2022-07-20 17:28:05.430  INFO 2360 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+    2022-07-20 17:28:05.544  INFO 2360 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+    2022-07-20 17:28:06.100  INFO 2360 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+    2022-07-20 17:28:06.110  INFO 2360 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;
+    2022-07-20 17:28:06.200  WARN 2360 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+    2022-07-20 17:28:06.382  INFO 2360 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+    2022-07-20 17:28:06.797  INFO 2360 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;
+    2022-07-20 17:28:06.834  INFO 2360 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path &#39;&#39;
+    2022-07-20 17:28:06.857  INFO 2360 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 3.901 seconds (JVM running for 4.585)
+    2022-07-20 17:28:07.126  INFO 2360 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;
+    2022-07-20 17:28:07.126  INFO 2360 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet &#39;dispatcherServlet&#39;
+    2022-07-20 17:28:07.128  INFO 2360 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+    saving in the H2 database
+    the new code in the database id: 1
+    finding in the H2 database
+    finding in the H2 database
+  time: Wed, 20 Jul 2022 14:28:08 UTC
 record: -1

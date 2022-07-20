@@ -1,14 +1,39 @@
 package platform;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name="Code")
 public class Code{
 
+    @Id
+    @JsonIgnore
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    String id;
+
+    @Column
     private String code;
+
+    public String getId() {
+        return id;
+    }
+
+    @Column
     private LocalDate date;
+
+    public Code() {
+        date = LocalDate.now();
+    }
+
+    public Code(String code) {
+        this.code = code;
+        date = LocalDate.now();
+    }
 
     public void setCode(String code) {
         this.code = code;
@@ -16,16 +41,6 @@ public class Code{
 
     public void setDate(LocalDate date) {
         this.date = date;
-    }
-
-    public Code() {
-        this.code = "new code constructed by SpringBoot";
-        date = LocalDate.now();
-    }
-
-    public Code(String code) {
-        this.code = code;
-        date = LocalDate.now();
     }
 
     public LocalDate getDate() {
@@ -36,4 +51,12 @@ public class Code{
         return code;
     }
 
+    @Override
+    public String toString() {
+        return "Code{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }

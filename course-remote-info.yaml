@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/405256/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sun, 17 Jul 2022 16:22:48 UTC
+update_date: Wed, 20 Jul 2022 09:54:35 UTC
 stages:
 - id: 692
   step: 11027
@@ -170,6 +170,8 @@ topics:
     theory_id: 15368
   - title: Reducing boilerplate code with Lombok
     theory_id: 13983
+  - title: Jackson
+    theory_id: 21027
   - title: MVC
     theory_id: 17197
   - title: Defining classes

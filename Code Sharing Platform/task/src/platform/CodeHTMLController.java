@@ -12,19 +12,28 @@ public class CodeHTMLController {
     @Autowired
     private CodeRepository codeRepository;
 
+    private CodeDAO codeDAO;
+
+    @Autowired
+    public CodeHTMLController(CodeDAO codeDAO){
+        this.codeDAO = codeDAO;
+    }
+
     @GetMapping("/code/{id}")
     public String codeForm(@PathVariable String id, Model model){
 
         if(id.equals("new"))
             return "form";
         else if(id.equals("latest")){
-            model.addAttribute("latest", codeRepository.getLatest());
+            model.addAttribute("latest", codeDAO.getLatest());
+//          model.addAttribute("latest", codeRepository.getLatest());
             return "latest";
         }
         else {
             try{
-                int i = Integer.parseInt(id);
-                model.addAttribute("code", codeRepository.get(i));
+                //long i = Long.parseLong(id);
+                model.addAttribute("code", codeDAO.findById(id));
+                //model.addAttribute("code", codeRepository.get(i));
                 return "code";
             }
             catch (Exception e){
