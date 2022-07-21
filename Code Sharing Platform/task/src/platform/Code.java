@@ -1,9 +1,6 @@
 package platform;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -15,6 +12,11 @@ public class Code{
     @JsonIgnore
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     String id;
+
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @Column
     private String code;

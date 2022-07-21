@@ -14,8 +14,8 @@
     <tbody>
 
     <tr th:each="code : ${latest}">
-        <td><pre th:text="${code.getCode()}"> Code </pre></td>
-        <td><pre th:text="${code.getDate().toString()}"> Date </pre></td>
+        <td><pre> <code th:text="${code.getCode()}"> Code </code></pre></td>
+        <td><span th:text="${code.getDate().toString()}"> Date </span></td>
     </tr>
     </tbody>
 </table>

@@ -4,9 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,8 +11,6 @@ import java.util.Map;
 @RestController
 public class CodeRESTController {
 
-    @Autowired
-    private CodeRepository codeRepository;
 
     private CodeDAO codeDAO;
 
@@ -33,8 +28,6 @@ public class CodeRESTController {
         }
         else {
             try {
-                //int i = Integer.parseInt(id);
-//                Code code = codeRepository.get(i);
                 Code code = codeDAO.findById(id);
                 return new ResponseEntity(code, HttpStatus.OK);
 
@@ -61,7 +54,6 @@ public class CodeRESTController {
     @PostMapping ("api/code/new")
     public ResponseEntity updateCode(@RequestBody Code newCode){
 
-        codeRepository.update(newCode);
         codeDAO.save(newCode);
         System.out.println("the new code in the database id: " + newCode.getId());
         return new ResponseEntity(Map.of("id", newCode.getId()), HttpStatus.OK);
