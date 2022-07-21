@@ -545,47 +545,6 @@ files:
     </body>
     </html>
   learner_created: true
-- name: src/platform/CodeDAOimplementation.java
-  visible: true
-  text: |
-    package platform;
-
-    import org.hibernate.Session;
-    import org.hibernate.query.Query;
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.stereotype.Repository;
-    import org.springframework.transaction.annotation.Transactional;
-
-    import javax.persistence.EntityManager;
-    import java.util.List;
-
-    @Repository
-    public class CodeDAOimplementation implements CodeDAO{
-
-
-        private EntityManager entityManager;
-
-        @Autowired
-        public CodeDAOimplementation(EntityManager entityManager) {
-            this.entityManager = entityManager;
-        }
-
-        @Override
-        @Transactional
-        public List<Code> getAll() {
-
-            // get the session
-            Session session = entityManager.unwrap(Session.class);
-            // create a query
-            Query<Code> query = session.createQuery("from code", Code.class);
-            // execute a query
-            List<Code> codeList = query.getResultList();
-            // return results
-            return codeList;
-
-        }
-    }
-  learner_created: true
 - name: src/resources/templates/error.html
   visible: true
   text: |-
@@ -696,18 +655,6 @@ files:
         }
     }
   learner_created: true
-- name: src/platform/CodeDAO.java
-  visible: true
-  text: |
-    package platform;
-
-    import java.util.List;
-
-    public interface CodeDAO {
-
-        public List<Code> getAll();
-    }
-  learner_created: true
 - name: src/resources/templates/code.html
   visible: true
   text: |-
@@ -791,9 +738,12 @@ files:
 - name: src/platform/CodeServiceImpl.java
   visible: true
   learner_created: true
+- name: src/platform/CodeRepository.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11030#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Thu, 21 Jul 2022 09:24:07 UTC
+  time: Thu, 21 Jul 2022 09:42:38 UTC
 record: 4

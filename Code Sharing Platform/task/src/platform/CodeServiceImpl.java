@@ -10,17 +10,17 @@ import java.util.List;
 @Service
 public class CodeServiceImpl implements CodeService{
 
-    private CodeDAO codeDAO;
+    private CodeRepository codeRepository;
 
     @Autowired
-    public CodeServiceImpl(CodeDAO codeDAO) {
-        this.codeDAO = codeDAO;
+    public CodeServiceImpl(CodeRepository codeRepository) {
+        this.codeRepository = codeRepository;
     }
 
     @Override
     @Transactional
     public List<Code> getAll() {
-        return codeDAO.getAll();
+        return codeRepository.findAll();
     }
 
     @Override
@@ -38,19 +38,19 @@ public class CodeServiceImpl implements CodeService{
     @Override
     @Transactional
     public void save(Code code) {
-        codeDAO.save(code);
+        codeRepository.save(code);
     }
 
     @Override
     @Transactional
     public Code findById(String id) {
-        return codeDAO.findById(id);
+        return codeRepository.findById(id).get();
     }
 
     @Override
     @Transactional
     public void deleteById(String id) {
-        codeDAO.deleteById(id);
+        codeRepository.deleteById(id);
 
     }
 }
