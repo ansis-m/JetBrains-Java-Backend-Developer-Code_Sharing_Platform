@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class CodeHTMLController {
 
 
-    private CodeDAO codeDAO;
+    private CodeService codeService;
 
     @Autowired
-    public CodeHTMLController(CodeDAO codeDAO){
-        this.codeDAO = codeDAO;
+    public CodeHTMLController(CodeService codeService){
+        this.codeService = codeService;
     }
 
     @GetMapping("/code/{id}")
@@ -23,12 +23,12 @@ public class CodeHTMLController {
         if(id.equals("new"))
             return "form";
         else if(id.equals("latest")){
-            model.addAttribute("latest", codeDAO.getLatest());
+            model.addAttribute("latest", codeService.getLatest());
             return "latest";
         }
         else {
             try{
-                model.addAttribute("code", codeDAO.findById(id));
+                model.addAttribute("code", codeService.findById(id));
                 return "code";
             }
             catch (Exception e){

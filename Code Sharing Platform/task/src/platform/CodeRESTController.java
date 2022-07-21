@@ -12,23 +12,23 @@ import java.util.Map;
 public class CodeRESTController {
 
 
-    private CodeDAO codeDAO;
+    private CodeService codeService;
 
     @Autowired
-    public CodeRESTController(CodeDAO codeDAO){
-        this.codeDAO = codeDAO;
+    public CodeRESTController(CodeService codeService){
+        this.codeService = codeService;
     }
 
     @GetMapping("/api/code/{id}")
     public ResponseEntity getJSON(@PathVariable String id){
 
         if(id.equals("latest")) {
-            List<Code> result = codeDAO.getLatest();
+            List<Code> result = codeService.getLatest();
             return new ResponseEntity(result, HttpStatus.OK);
         }
         else {
             try {
-                Code code = codeDAO.findById(id);
+                Code code = codeService.findById(id);
                 return new ResponseEntity(code, HttpStatus.OK);
 
             }
@@ -43,7 +43,7 @@ public class CodeRESTController {
     public ResponseEntity showDatabase(){
 
         Map<String, String> result = new HashMap<>();
-        for(Code c : codeDAO.getAll()) {
+        for(Code c : codeService.getAll()) {
             result.put(c.getId(), c.getCode());
             System.out.println(c.getCode());
         }
@@ -54,7 +54,7 @@ public class CodeRESTController {
     @PostMapping ("api/code/new")
     public ResponseEntity updateCode(@RequestBody Code newCode){
 
-        codeDAO.save(newCode);
+        codeService.save(newCode);
         System.out.println("the new code in the database id: " + newCode.getId());
         return new ResponseEntity(Map.of("id", newCode.getId()), HttpStatus.OK);
     }
