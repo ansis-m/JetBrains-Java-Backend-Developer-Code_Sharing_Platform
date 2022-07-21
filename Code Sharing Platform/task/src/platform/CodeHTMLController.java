@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.UUID;
+
 @Controller
 public class CodeHTMLController {
 
@@ -28,7 +30,7 @@ public class CodeHTMLController {
         }
         else {
             try{
-                model.addAttribute("code", codeService.findById(id));
+                model.addAttribute("code", codeService.findById(UUID.fromString(id)));
                 return "code";
             }
             catch (Exception e){

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 public class CodeRESTController {
@@ -28,7 +29,7 @@ public class CodeRESTController {
         }
         else {
             try {
-                Code code = codeService.findById(id);
+                Code code = codeService.findById(UUID.fromString(id));
                 return new ResponseEntity(code, HttpStatus.OK);
 
             }
@@ -44,7 +45,7 @@ public class CodeRESTController {
 
         Map<String, String> result = new HashMap<>();
         for(Code c : codeService.getAll()) {
-            result.put(c.getId(), c.getCode());
+            result.put(c.getId().toString(), c.getCode());
             System.out.println(c.getCode());
         }
 
@@ -56,6 +57,6 @@ public class CodeRESTController {
 
         codeService.save(newCode);
         System.out.println("the new code in the database id: " + newCode.getId());
-        return new ResponseEntity(Map.of("id", newCode.getId()), HttpStatus.OK);
+        return new ResponseEntity(Map.of("id", newCode.getId().toString()), HttpStatus.OK);
     }
 }

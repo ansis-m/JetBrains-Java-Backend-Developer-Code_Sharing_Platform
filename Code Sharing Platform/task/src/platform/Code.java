@@ -1,6 +1,12 @@
 package platform;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -10,19 +16,26 @@ import java.util.UUID;
 public class Code{
 
     @Id
-    @JsonIgnore
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    String id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "ID", updatable = false, nullable = false)
+    @ColumnDefault("random_uuid()")
+    @Getter
+    @Setter
+    private UUID id;
 
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
     @Column
     private String code;
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 

@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CodeServiceImpl implements CodeService{
@@ -20,6 +21,7 @@ public class CodeServiceImpl implements CodeService{
     @Override
     @Transactional
     public List<Code> getAll() {
+
         return codeRepository.findAll();
     }
 
@@ -43,13 +45,13 @@ public class CodeServiceImpl implements CodeService{
 
     @Override
     @Transactional
-    public Code findById(String id) {
+    public Code findById(UUID id) {
         return codeRepository.findById(id).get();
     }
 
     @Override
     @Transactional
-    public void deleteById(String id) {
+    public void deleteById(UUID id) {
         codeRepository.deleteById(id);
 
     }
