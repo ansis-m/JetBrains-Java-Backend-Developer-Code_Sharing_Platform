@@ -49,6 +49,13 @@ public class Code{
         date = LocalDate.now();
     }
 
+    public Code(CodeInput input) {
+        this.code = input.getCode();
+        this.time = Integer.parseInt(input.getTime());
+        this.views = Integer.parseInt(input.getViews());
+        date = LocalDate.now();
+    }
+
 
     public void setId(UUID id) {
         this.id = id;

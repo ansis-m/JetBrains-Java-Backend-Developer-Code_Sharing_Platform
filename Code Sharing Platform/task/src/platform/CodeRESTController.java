@@ -53,11 +53,19 @@ public class CodeRESTController {
     }
 
     @PostMapping ("api/code/new")
-    public ResponseEntity updateCode(@RequestBody Code newCode){
+    public ResponseEntity updateCode(@RequestBody CodeInput newInput){
 
         System.out.println("Enter the api/code/new");
-        codeService.save(newCode);
-        System.out.println("the new code in the database id: " + newCode.getId());
-        return new ResponseEntity(Map.of("id", newCode.getId().toString()), HttpStatus.OK);
+        try{
+            Code newCode = new Code(newInput);
+            codeService.save(newCode);
+            System.out.println("the new code in the database id: " + newCode.getId());
+            return new ResponseEntity(Map.of("id", newCode.getId().toString()), HttpStatus.OK);
+        }
+        catch (Exception e) {
+            System.out.println("bad input format");
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
     }
 }
