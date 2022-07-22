@@ -13,6 +13,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name="Code")
+@Setter
+@Getter
 public class Code{
 
     @Id
@@ -38,6 +40,14 @@ public class Code{
     @Column
     private Integer time;
 
+    @Column
+    @JsonIgnore
+    private boolean limitTime;
+
+    @Column
+    @JsonIgnore
+    private boolean limitViews;
+
     public Code() {
         date = LocalDate.now();
     }
@@ -46,7 +56,9 @@ public class Code{
         this.code = code;
         this.time = Integer.valueOf(time);
         this.views = Integer.valueOf(views);
-        date = LocalDate.now();
+        this.date = LocalDate.now();
+        this.limitViews = this.views > 0;
+        this.limitTime = this.time > 0;
     }
 
     public Code(CodeInput input) {
@@ -54,54 +66,23 @@ public class Code{
         this.time = Integer.parseInt(input.getTime());
         this.views = Integer.parseInt(input.getViews());
         date = LocalDate.now();
-    }
-
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public int getViews() {
-        return views;
+        this.limitViews = this.views > 0;
+        this.limitTime = this.time > 0;
     }
 
     public void setViews(String views) {
         this.views = Integer.valueOf(views);
     }
 
-    public int getTime() {
-        return time;
-    }
-
     public void setTime(String time) {
         this.time = Integer.valueOf(time);
     }
 
-    public void setTime(Integer time) {
-        this.time = time;
+    public void view(){
+        this.views--;
     }
 
-    public void setViews(Integer views) {
-        this.views = views;
+    public boolean limitedViews(){
+        return limitViews;
     }
 }

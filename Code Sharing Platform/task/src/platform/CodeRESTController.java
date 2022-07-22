@@ -30,12 +30,22 @@ public class CodeRESTController {
         else {
             try {
                 Code code = codeService.findById(UUID.fromString(id));
-                return new ResponseEntity(code, HttpStatus.OK);
+
+                if(code.limitedViews() && code.getViews() >= 0) {
+                    code.view();
+                    codeService.save(code);
+
+                }
+                if (code.getViews() >= 0 || !code.limitedViews()) {
+                    return new ResponseEntity(code, HttpStatus.OK);
+                }
+                else
+                    return new ResponseEntity(HttpStatus.NOT_FOUND);
 
             }
             catch (Exception e) {
                 System.out.println("error at /api/code/{id}, bad id: " + id);
-                return new ResponseEntity(HttpStatus.BAD_REQUEST);
+                return new ResponseEntity(HttpStatus.NOT_FOUND);
             }
         }
     }

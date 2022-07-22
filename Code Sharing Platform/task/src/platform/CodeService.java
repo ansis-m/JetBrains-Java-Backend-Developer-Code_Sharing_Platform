@@ -7,9 +7,9 @@ import java.util.UUID;
 
 public interface CodeService {
 
-    public List<Code> getAll();
-    public List<Code> getLatest();
-    public void save(Code code);
+    List<Code> getAll();
+    List<Code> getLatest();
+    void save(Code code);
     Code findById(UUID id);
     void deleteById(UUID id);
 

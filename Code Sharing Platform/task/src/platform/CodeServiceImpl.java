@@ -46,7 +46,7 @@ public class CodeServiceImpl implements CodeService{
     @Override
     @Transactional
     public Code findById(UUID id) {
-        return codeRepository.findById(id).get();
+        return codeRepository.findById(id).orElseThrow();
     }
 
     @Override
