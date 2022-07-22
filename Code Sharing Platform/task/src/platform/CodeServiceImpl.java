@@ -29,9 +29,17 @@ public class CodeServiceImpl implements CodeService{
     @Transactional
     public List<Code> getLatest() {
         List<Code> codeList = this.getAll();
+        codeList.removeIf(c -> c.limitedViews() && c.getViews() < 1);
         int i = codeList.size();
         if (i >= 11) {
             codeList = codeList.subList(i - 10, i);
+        }
+        //not sure if necessary to decrement in case a list is viewed
+        for(Code c : codeList) {
+            if(c.limitedViews()){
+                c.view();
+                codeRepository.save(c);
+            }
         }
         Collections.reverse(codeList);
         return codeList;
