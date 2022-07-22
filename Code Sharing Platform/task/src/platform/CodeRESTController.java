@@ -29,7 +29,7 @@ public class CodeRESTController {
         }
         else {
             try {
-                Code code = codeService.findById(UUID.fromString(id));
+                Code code = codeService.findById(Long.parseLong(id));
                 return new ResponseEntity(code, HttpStatus.OK);
 
             }
@@ -45,7 +45,7 @@ public class CodeRESTController {
 
         Map<String, String> result = new HashMap<>();
         for(Code c : codeService.getAll()) {
-            result.put(c.getId().toString(), c.getCode());
+            result.put(String.valueOf(c.getId()), c.getCode());
             System.out.println(c.getCode());
         }
 
@@ -57,6 +57,6 @@ public class CodeRESTController {
 
         codeService.save(newCode);
         System.out.println("the new code in the database id: " + newCode.getId());
-        return new ResponseEntity(Map.of("id", newCode.getId().toString()), HttpStatus.OK);
+        return new ResponseEntity(Map.of("id", String.valueOf(newCode.getId())), HttpStatus.OK);
     }
 }

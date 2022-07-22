@@ -16,26 +16,30 @@ import java.util.UUID;
 public class Code{
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-            name = "UUID",
-            strategy = "org.hibernate.id.UUIDGenerator"
-    )
-    @Column(name = "ID", updatable = false, nullable = false)
-    @ColumnDefault("random_uuid()")
+    @JsonIgnore
+    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(generator="system-uuid")
+//    @GenericGenerator(name="system-uuid", strategy = "uuid")
+//    @GeneratedValue(generator = "UUID")
+//    @GenericGenerator(
+//            name = "UUID",
+//            strategy = "org.hibernate.id.UUIDGenerator"
+//    )
+    @Column(name = "ID", updatable = false, nullable = false, length = 255)
+//    @ColumnDefault("random_uuid()")
     @Getter
     @Setter
-    private UUID id;
+    private long id;
 
 
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 
     @Column
     private String code;
 
-    public UUID getId() {
+    public long getId() {
         return id;
     }
 

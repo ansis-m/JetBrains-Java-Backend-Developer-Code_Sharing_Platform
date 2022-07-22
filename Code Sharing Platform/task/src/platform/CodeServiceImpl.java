@@ -45,13 +45,13 @@ public class CodeServiceImpl implements CodeService{
 
     @Override
     @Transactional
-    public Code findById(UUID id) {
+    public Code findById(long id) {
         return codeRepository.findById(id).get();
     }
 
     @Override
     @Transactional
-    public void deleteById(UUID id) {
+    public void deleteById(long id) {
         codeRepository.deleteById(id);
 
     }

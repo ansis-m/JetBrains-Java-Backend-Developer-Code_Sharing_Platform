@@ -30,7 +30,7 @@ public class CodeHTMLController {
         }
         else {
             try{
-                model.addAttribute("code", codeService.findById(UUID.fromString(id)));
+                model.addAttribute("code", codeService.findById(Long.parseLong(id)));
                 return "code";
             }
             catch (Exception e){
