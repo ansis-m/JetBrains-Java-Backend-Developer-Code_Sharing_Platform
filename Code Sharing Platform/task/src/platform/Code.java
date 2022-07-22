@@ -16,6 +16,7 @@ import java.util.UUID;
 public class Code{
 
     @Id
+    @JsonIgnore
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(
             name = "UUID",
@@ -23,32 +24,38 @@ public class Code{
     )
     @Column(name = "ID", updatable = false, nullable = false)
     @ColumnDefault("random_uuid()")
-    @Getter
-    @Setter
     private UUID id;
+
+    @Column
+    private String code;
+
+    @Column
+    private LocalDate date;
+
+    @Column
+    private Integer views;
+
+    @Column
+    private Integer time;
+
+    public Code() {
+        date = LocalDate.now();
+    }
+
+    public Code(String code, String views, String time) {
+        this.code = code;
+        this.time = Integer.valueOf(time);
+        this.views = Integer.valueOf(views);
+        date = LocalDate.now();
+    }
 
 
     public void setId(UUID id) {
         this.id = id;
     }
 
-    @Column
-    private String code;
-
     public UUID getId() {
         return id;
-    }
-
-    @Column
-    private LocalDate date;
-
-    public Code() {
-        date = LocalDate.now();
-    }
-
-    public Code(String code) {
-        this.code = code;
-        date = LocalDate.now();
     }
 
     public void setCode(String code) {
@@ -67,12 +74,27 @@ public class Code{
         return code;
     }
 
-    @Override
-    public String toString() {
-        return "Code{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", date=" + date +
-                '}';
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(String views) {
+        this.views = Integer.valueOf(views);
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = Integer.valueOf(time);
+    }
+
+    public void setTime(Integer time) {
+        this.time = time;
+    }
+
+    public void setViews(Integer views) {
+        this.views = views;
     }
 }

@@ -55,6 +55,7 @@ public class CodeRESTController {
     @PostMapping ("api/code/new")
     public ResponseEntity updateCode(@RequestBody Code newCode){
 
+        System.out.println("Enter the api/code/new");
         codeService.save(newCode);
         System.out.println("the new code in the database id: " + newCode.getId());
         return new ResponseEntity(Map.of("id", newCode.getId().toString()), HttpStatus.OK);
