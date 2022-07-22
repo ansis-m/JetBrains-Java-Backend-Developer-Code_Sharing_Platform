@@ -33,11 +33,9 @@ public class CodeRESTController {
         else {
             try {
                 Code code = codeService.findById(UUID.fromString(id));
-                long remainingTime = code.getTime() - ChronoUnit.SECONDS.between(code.getDateTime(), LocalDateTime.now());
-                System.out.println("remaining time: " + remainingTime);
-                if(remainingTime <= 0 && code.limitedTime())
+                if(code.limitedTime() && code.remainingTime() < 0)
                     return new ResponseEntity(HttpStatus.NOT_FOUND);
-
+                System.out.println("remaining time: " + code.getTime());
                 if(code.limitedViews() && code.getViews() >= 0) {
                     code.view();
                     codeService.save(code);

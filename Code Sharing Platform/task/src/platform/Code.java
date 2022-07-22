@@ -10,6 +10,7 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.UUID;
 
 @Entity
@@ -43,7 +44,12 @@ public class Code{
     private Integer views;
 
     @Column
+    @JsonIgnore
+    private Integer availableTime;
+
+    @Column
     private Integer time;
+
 
     @Column
     @JsonIgnore
@@ -59,13 +65,18 @@ public class Code{
 
 
     public Code(CodeInput input) {
+        System.out.println("enter code constructor");
         this.code = input.getCode();
-        this.time = Integer.parseInt(input.getTime());
+        this.availableTime = Integer.parseInt(input.getTime());
         this.views = Integer.parseInt(input.getViews());
+        System.out.println("code constructor1");
         date = LocalDate.now();
         dateTime = LocalDateTime.now();
         this.limitViews = this.views > 0;
-        this.limitTime = this.time > 0;
+        this.limitTime = this.availableTime > 0;
+        System.out.println("code constructor2");
+        this.time = this.availableTime;
+        System.out.println("exit code constructor");
     }
 
     public void setViews(String views) {
@@ -86,5 +97,10 @@ public class Code{
 
     public boolean limitedTime(){
         return limitTime;
+    }
+
+    public int remainingTime(){
+        this.time = Math.toIntExact(availableTime - ChronoUnit.SECONDS.between(this.dateTime, LocalDateTime.now()));
+        return this.time;
     }
 }
