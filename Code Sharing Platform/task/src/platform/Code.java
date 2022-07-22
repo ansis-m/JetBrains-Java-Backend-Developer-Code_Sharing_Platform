@@ -9,6 +9,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -35,6 +36,10 @@ public class Code{
     private LocalDate date;
 
     @Column
+    @JsonIgnore
+    private LocalDateTime dateTime;
+
+    @Column
     private Integer views;
 
     @Column
@@ -52,20 +57,13 @@ public class Code{
         date = LocalDate.now();
     }
 
-    public Code(String code, String views, String time) {
-        this.code = code;
-        this.time = Integer.valueOf(time);
-        this.views = Integer.valueOf(views);
-        this.date = LocalDate.now();
-        this.limitViews = this.views > 0;
-        this.limitTime = this.time > 0;
-    }
 
     public Code(CodeInput input) {
         this.code = input.getCode();
         this.time = Integer.parseInt(input.getTime());
         this.views = Integer.parseInt(input.getViews());
         date = LocalDate.now();
+        dateTime = LocalDateTime.now();
         this.limitViews = this.views > 0;
         this.limitTime = this.time > 0;
     }
@@ -84,5 +82,9 @@ public class Code{
 
     public boolean limitedViews(){
         return limitViews;
+    }
+
+    public boolean limitedTime(){
+        return limitTime;
     }
 }

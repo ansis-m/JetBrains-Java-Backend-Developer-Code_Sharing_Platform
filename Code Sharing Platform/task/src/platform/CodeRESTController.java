@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +33,10 @@ public class CodeRESTController {
         else {
             try {
                 Code code = codeService.findById(UUID.fromString(id));
+                long remainingTime = code.getTime() - ChronoUnit.SECONDS.between(code.getDateTime(), LocalDateTime.now());
+                System.out.println("remaining time: " + remainingTime);
+                if(remainingTime <= 0 && code.limitedTime())
+                    return new ResponseEntity(HttpStatus.NOT_FOUND);
 
                 if(code.limitedViews() && code.getViews() >= 0) {
                     code.view();
