@@ -31,23 +31,20 @@ public class CodeHTMLController {
             return "latest";
         }
         else {
-            try{
                 Code code = codeService.findById(UUID.fromString(id));
+                if(code.limitedTime() && code.remainingTime() < 0)
+                    throw new OutOfTimeException();
                 if(code.limitedViews() && code.getViews() >= 0) {
                     code.view();
                     codeService.save(code);
-
                 }
                 if (code.getViews() >= 0 || !code.limitedViews()) {
                     model.addAttribute("code", code);
                     return "code";
                 }
-            }
-            catch (Exception e){
-                System.out.println("bad code id at /code/{id}!");
-                return "error";
-            }
-            return "error";
+                else if (code.getViews() <= 0 || code.limitedViews())
+                    throw new OutOfViewsException();
         }
+        return "error";
     }
 }

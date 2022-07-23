@@ -946,10 +946,7 @@ files:
         }
     }
   learner_created: true
-- name: src/platform/CodeServiceImpl.java
-  visible: true
-  learner_created: true
-- name: src/platform/CodeRepository.java
+- name: src/resources/templates/error/404.html
   visible: true
   learner_created: true
 - name: src/platform/CodeService.java
@@ -958,210 +955,240 @@ files:
 - name: src/platform/CodeInput.java
   visible: true
   learner_created: true
+- name: src/platform/CodeServiceImpl.java
+  visible: true
+  learner_created: true
+- name: src/platform/CodeRepository.java
+  visible: true
+  learner_created: true
+- name: src/platform/OutOfTimeException.java
+  visible: true
+  learner_created: true
+- name: src/platform/OutOfViewsException.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11031#comment
 status: Failed
 feedback:
-  message: "Wrong answer in test #110\n\nGET /code/7f036c32-6770-4879-8452-531df66e0bc9\
+  message: "Wrong answer in test #110\n\nGET /code/5268d061-8068-4c30-a686-407de90e6c8e\
     \ should respond with status code 404, responded: 200\n\nResponse body:\n\n&lt;!DOCTYPE\
     \ html&gt;\r\n&lt;html lang=&quot;en&quot;&gt;\r\n&lt;head&gt;\r\n    &lt;title&gt;\
-    \ Code &lt;/title&gt;\r\n    &lt;link rel=&quot;stylesheet&quot;\r\n         \
-    \ href=&quot;//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css&quot;&gt;\r\
-    \n    &lt;script src=&quot;//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js&quot;&gt;&lt;/script&gt;\r\
-    \n    &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;\r\n&lt;/head&gt;\r\
-    \n&lt;body&gt;\r\n &lt;span id=&quot;load_date&quot;&gt;2022-07-22&lt;/span&gt;\r\
-    \n &lt;br&gt;\r\n \r\n &lt;br&gt;\r\n &lt;span id=&quot;time_restriction&quot;&gt;The\
-    \ code will be available for 3 seconds&lt;/span&gt;\r\n &lt;pre id=&quot;code_snippet&quot;&gt;&lt;code&gt;Snippet\
-    \ #20&lt;/code&gt;&lt;/pre&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\n\nPlease find\
-    \ below the output of your program during this failed test.\n\n---\n\n[last 250\
-    \ lines of output are shown, 23 skipped]\n2022-07-22 20:22:38.162  INFO 25112\
-    \ --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001:\
-    \ Hibernate Commons Annotations {5.1.2.Final}\n2022-07-22 20:22:38.281  INFO 25112\
-    \ --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400:\
-    \ Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 20:22:38.852  INFO\
-    \ 25112 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490:\
-    \ Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]\n\
-    2022-07-22 20:22:38.863  INFO 25112 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
+    \ 404 &lt;/title&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;br&gt;\r\n&lt;h1&gt;Out\
+    \ of time!&lt;/h1&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\n\nPlease find below the\
+    \ output of your program during this failed test.\n\n---\n\n.   ____         \
+    \ _            __ _ _\n /\\\\ / ___&#39;_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( (\
+    \ )\\___ | &#39;_ | &#39;_| | &#39;_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)|\
+    \ | | | | || (_| |  ) ) ) )\n  &#39;  |____| .__|_| |_|_| |_\\__, | / / / /\n\
+    \ =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v2.5.6)\n\
+    \n2022-07-22 21:22:46.923  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
+    \             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2\
+    \ with PID 19592 (started by Ansis in C:\\Users\\Ansis\\Desktop\\maven\\Code Sharing\
+    \ Platform\\Code Sharing Platform\\task)\n2022-07-22 21:22:46.926  INFO 19592\
+    \ --- [    Test worker] platform.CodeSharingPlatform             : No active profile\
+    \ set, falling back to default profiles: default\n2022-07-22 21:22:47.802  INFO\
+    \ 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping\
+    \ Spring Data JPA repositories in DEFAULT mode.\n2022-07-22 21:22:47.842  INFO\
+    \ 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished\
+    \ Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.\n\
+    2022-07-22 21:22:48.343  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \  : Tomcat initialized with port(s): 8889 (http)\n2022-07-22 21:22:48.353  INFO\
+    \ 19592 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
+    \ service [Tomcat]\n2022-07-22 21:22:48.354  INFO 19592 --- [    Test worker]\
+    \ org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache\
+    \ Tomcat/9.0.54]\n2022-07-22 21:22:48.444  INFO 19592 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \       : Initializing Spring embedded WebApplicationContext\n2022-07-22 21:22:48.444\
+    \  INFO 19592 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
+    \ Root WebApplicationContext: initialization completed in 1466 ms\n2022-07-22\
+    \ 21:22:48.560  INFO 19592 --- [    Test worker] com.zaxxer.hikari.HikariDataSource\
+    \       : HikariPool-1 - Starting...\n2022-07-22 21:22:48.737  INFO 19592 ---\
+    \ [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 -\
+    \ Start completed.\n2022-07-22 21:22:48.748  INFO 19592 --- [    Test worker]\
+    \ o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at &#39;/h2-console&#39;.\
+    \ Database available at &#39;jdbc:h2:file:../snippets&#39;\n2022-07-22 21:22:48.954\
+    \  INFO 19592 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  :\
+    \ HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-07-22 21:22:49.012\
+    \  INFO 19592 --- [    Test worker] org.hibernate.Version                    :\
+    \ HHH000412: Hibernate ORM core version 5.4.32.Final\n2022-07-22 21:22:49.150\
+    \  INFO 19592 --- [    Test worker] o.hibernate.annotations.common.Version   :\
+    \ HCANN000001: Hibernate Commons Annotations {5.1.2.Final}\n2022-07-22 21:22:49.266\
+    \  INFO 19592 --- [    Test worker] org.hibernate.dialect.Dialect            :\
+    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 21:22:49.803\
+    \  INFO 19592 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       :\
+    \ HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]\n\
+    2022-07-22 21:22:49.813  INFO 19592 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
     \ : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
-    2022-07-22 20:22:39.193  WARN 25112 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
+    2022-07-22 21:22:50.127  WARN 19592 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
     \ : spring.jpa.open-in-view is enabled by default. Therefore, database queries\
     \ may be performed during view rendering. Explicitly configure spring.jpa.open-in-view\
-    \ to disable this warning\n2022-07-22 20:22:39.454  INFO 25112 --- [    Test worker]\
+    \ to disable this warning\n2022-07-22 21:22:50.308  INFO 19592 --- [    Test worker]\
     \ o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index\n\
-    2022-07-22 20:22:39.931  INFO 25112 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
+    2022-07-22 21:22:50.722  INFO 19592 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
     \      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;\n2022-07-22\
-    \ 20:22:39.978  INFO 25112 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \ 21:22:50.758  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
     \  : Tomcat started on port(s): 8889 (http) with context path &#39;&#39;\n2022-07-22\
-    \ 20:22:40.000  INFO 25112 --- [    Test worker] platform.CodeSharingPlatform\
-    \             : Started CodeSharingPlatform in 4.535 seconds (JVM running for\
-    \ 5.16)\n2022-07-22 20:22:40.291  INFO 25112 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \ 21:22:50.779  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
+    \             : Started CodeSharingPlatform in 4.212 seconds (JVM running for\
+    \ 4.852)\n2022-07-22 21:22:51.069  INFO 19592 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
     \       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;\n\
-    2022-07-22 20:22:40.291  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
-    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 20:22:40.293\
-    \  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
-    \ Completed initialization in 1 ms\nEnter the api/code/new\nenter code constructor\n\
-    code constructor1\ncode constructor2\nexit code constructor\nthe new code in the\
-    \ database id: 6f3d7750-f970-4f52-bc79-e5f80ff5c115\nremaining time: 0\nEnter\
-    \ the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 65cb4068-dd6d-4519-8ada-76fb16087783\n\
-    remaining time: 0\nremaining time: 0\nEnter the api/code/new\nenter code constructor\n\
-    code constructor1\ncode constructor2\nexit code constructor\nthe new code in the\
-    \ database id: 77b7ace0-d9bf-4095-a1c2-9e0b78ffa8f5\nEnter the api/code/new\n\
-    enter code constructor\ncode constructor1\ncode constructor2\nexit code constructor\n\
-    the new code in the database id: b8ddf722-58b8-4b65-9e35-430454875056\nEnter the\
-    \ api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 04496357-10c5-4e2d-92ce-6f2b8c840ef9\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 363d0f2f-76a6-4874-9aef-38e8944cd7cf\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 784943c3-f021-448e-938a-f32ac17908b5\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 7623c470-1b29-4350-ab52-ff0b7b6633cc\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: ff9d24aa-b6b6-4e54-b868-e5422774240c\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 27ef40f0-c502-46d2-a099-aaabefdf0a81\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: f7ffeabc-904a-491b-b3f3-a327e8779921\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 6110d960-af28-48b2-80d4-3b29fca20d49\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 34f1075a-8099-4bb9-8124-8fa97e0554e4\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 5f0a913a-d510-4d86-a34c-45a6649faa34\n\
+    2022-07-22 21:22:51.070  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
+    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 21:22:51.071\
+    \  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
+    \ Completed initialization in 1 ms\nEnter the api/code/new\nthe new code in the\
+    \ database id: d38425a5-cb36-4196-8327-ac4f733e97f0\nremaining time: 0\nremaining\
+    \ time: 0\nEnter the api/code/new\nthe new code in the database id: a995db2b-7213-4049-a24d-b99b513ff26f\n\
+    remaining time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nEnter\
+    \ the api/code/new\nthe new code in the database id: 2eedff0d-f840-4e7b-b7a2-196d0a905c9e\n\
+    Enter the api/code/new\nthe new code in the database id: 1fba9a19-2282-4c83-8615-096e0417af00\n\
+    Enter the api/code/new\nthe new code in the database id: f1c5f59b-66d0-422e-bbe3-3dd4495536d9\n\
+    Enter the api/code/new\nthe new code in the database id: 6a21a20f-42b3-4a2a-b30a-d353ae8ba460\n\
+    Enter the api/code/new\nthe new code in the database id: 479ec0ff-3ecd-4655-95d5-63e8cc77c7dc\n\
+    Enter the api/code/new\nthe new code in the database id: 3ee9ea12-70a6-471a-8047-aba35f22f061\n\
+    Enter the api/code/new\nthe new code in the database id: fc47eeae-527c-4a47-b668-c295c3734b65\n\
+    Enter the api/code/new\nthe new code in the database id: 3371219a-c1dd-4001-8e1f-683d87c073b6\n\
+    Enter the api/code/new\nthe new code in the database id: 0990479c-f153-4fc2-91c2-6f8a8d1e68be\n\
+    Enter the api/code/new\nthe new code in the database id: 2f4b8735-191c-4d3b-91c3-73bada50d4b2\n\
+    Enter the api/code/new\nthe new code in the database id: 17a0842e-3282-43c0-baac-c2ff9c37947f\n\
+    Enter the api/code/new\nthe new code in the database id: ce28557b-05af-4f00-b8c1-68315a2859de\n\
     remaining time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
     \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
     \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
-    \ time: 0\nremaining time: 0\n2022-07-22 20:22:41.986  INFO 25112 --- [      \
-    \ Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory\
-    \ for persistence unit &#39;default&#39;\n2022-07-22 20:22:41.989  INFO 25112\
-    \ --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1\
-    \ - Shutdown initiated...\n2022-07-22 20:22:41.998  INFO 25112 --- [       Thread-5]\
-    \ com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.\n\
-    \n  .   ____          _            __ _ _\n /\\\\ / ___&#39;_ __ _ _(_)_ __  __\
-    \ _ \\ \\ \\ \\\n( ( )\\___ | &#39;_ | &#39;_| | &#39;_ \\/ _` | \\ \\ \\ \\\n\
-    \ \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  &#39;  |____| .__|_| |_|_| |_\\\
-    __, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::  \
-    \              (v2.5.6)\n\n2022-07-22 20:22:42.038  INFO 25112 --- [    Test worker]\
-    \ platform.CodeSharingPlatform             : Starting CodeSharingPlatform using\
-    \ Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 25112 (started by Ansis in C:\\Users\\\
-    Ansis\\Desktop\\maven\\Code Sharing Platform\\Code Sharing Platform\\task)\n2022-07-22\
-    \ 20:22:42.038  INFO 25112 --- [    Test worker] platform.CodeSharingPlatform\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\n2022-07-22\
+    \ 21:22:52.746  INFO 19592 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean\
+    \ : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
+    2022-07-22 21:22:52.748  INFO 19592 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource\
+    \       : HikariPool-1 - Shutdown initiated...\n2022-07-22 21:22:52.757  INFO\
+    \ 19592 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1\
+    \ - Shutdown completed.\n\n  .   ____          _            __ _ _\n /\\\\ / ___&#39;_\
+    \ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | &#39;_ | &#39;_| | &#39;_ \\/\
+    \ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  &#39;  |____|\
+    \ .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n ::\
+    \ Spring Boot ::                (v2.5.6)\n\n2022-07-22 21:22:52.870  INFO 19592\
+    \ --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform\
+    \ using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 19592 (started by Ansis in C:\\\
+    Users\\Ansis\\Desktop\\maven\\Code Sharing Platform\\Code Sharing Platform\\task)\n\
+    2022-07-22 21:22:52.870  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
     \             : No active profile set, falling back to default profiles: default\n\
-    2022-07-22 20:22:42.294  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate\
-    \ : Bootstrapping Spring Data JPA repositories in DEFAULT mode.\n2022-07-22 20:22:42.301\
-    \  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate :\
-    \ Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.\n\
-    2022-07-22 20:22:42.375  INFO 25112 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
-    \  : Tomcat initialized with port(s): 8889 (http)\n2022-07-22 20:22:42.376  INFO\
-    \ 25112 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
-    \ service [Tomcat]\n2022-07-22 20:22:42.377  INFO 25112 --- [    Test worker]\
+    2022-07-22 21:22:53.112  INFO 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate\
+    \ : Bootstrapping Spring Data JPA repositories in DEFAULT mode.\n2022-07-22 21:22:53.125\
+    \  INFO 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate :\
+    \ Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.\n\
+    2022-07-22 21:22:53.203  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \  : Tomcat initialized with port(s): 8889 (http)\n2022-07-22 21:22:53.204  INFO\
+    \ 19592 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
+    \ service [Tomcat]\n2022-07-22 21:22:53.204  INFO 19592 --- [    Test worker]\
     \ org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache\
-    \ Tomcat/9.0.54]\n2022-07-22 20:22:42.402  INFO 25112 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]\
-    \       : Initializing Spring embedded WebApplicationContext\n2022-07-22 20:22:42.402\
-    \  INFO 25112 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
-    \ Root WebApplicationContext: initialization completed in 361 ms\n2022-07-22 20:22:42.435\
-    \  INFO 25112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       :\
-    \ HikariPool-2 - Starting...\n2022-07-22 20:22:42.447  INFO 25112 --- [    Test\
+    \ Tomcat/9.0.54]\n2022-07-22 21:22:53.230  INFO 19592 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \       : Initializing Spring embedded WebApplicationContext\n2022-07-22 21:22:53.230\
+    \  INFO 19592 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
+    \ Root WebApplicationContext: initialization completed in 359 ms\n2022-07-22 21:22:53.259\
+    \  INFO 19592 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       :\
+    \ HikariPool-2 - Starting...\n2022-07-22 21:22:53.270  INFO 19592 --- [    Test\
     \ worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.\n\
-    2022-07-22 20:22:42.447  INFO 25112 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration\
+    2022-07-22 21:22:53.270  INFO 19592 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration\
     \    : H2 console available at &#39;/h2-console&#39;. Database available at &#39;jdbc:h2:file:../snippets&#39;\n\
-    2022-07-22 20:22:42.481  INFO 25112 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper\
-    \  : HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-07-22 20:22:42.487\
-    \  INFO 25112 --- [    Test worker] org.hibernate.dialect.Dialect            :\
-    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 20:22:42.529\
-    \  INFO 25112 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       :\
+    2022-07-22 21:22:53.308  INFO 19592 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper\
+    \  : HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-07-22 21:22:53.314\
+    \  INFO 19592 --- [    Test worker] org.hibernate.dialect.Dialect            :\
+    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 21:22:53.353\
+    \  INFO 19592 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       :\
     \ HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]\n\
-    2022-07-22 20:22:42.529  INFO 25112 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
+    2022-07-22 21:22:53.353  INFO 19592 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
     \ : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
-    2022-07-22 20:22:42.585  WARN 25112 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
+    2022-07-22 21:22:53.406  WARN 19592 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
     \ : spring.jpa.open-in-view is enabled by default. Therefore, database queries\
     \ may be performed during view rendering. Explicitly configure spring.jpa.open-in-view\
-    \ to disable this warning\n2022-07-22 20:22:42.637  INFO 25112 --- [    Test worker]\
+    \ to disable this warning\n2022-07-22 21:22:53.450  INFO 19592 --- [    Test worker]\
     \ o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index\n\
-    2022-07-22 20:22:42.771  INFO 25112 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
+    2022-07-22 21:22:53.558  INFO 19592 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
     \      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;\n2022-07-22\
-    \ 20:22:42.786  INFO 25112 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \ 21:22:53.571  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
     \  : Tomcat started on port(s): 8889 (http) with context path &#39;&#39;\n2022-07-22\
-    \ 20:22:42.792  INFO 25112 --- [    Test worker] platform.CodeSharingPlatform\
-    \             : Started CodeSharingPlatform in 0.78 seconds (JVM running for 7.951)\n\
-    2022-07-22 20:22:42.798  INFO 25112 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \ 21:22:53.574  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
+    \             : Started CodeSharingPlatform in 0.727 seconds (JVM running for\
+    \ 7.648)\n2022-07-22 21:22:53.582  INFO 19592 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
     \       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;\n\
-    2022-07-22 20:22:42.798  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
-    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 20:22:42.800\
-    \  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
+    2022-07-22 21:22:53.583  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
+    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 21:22:53.584\
+    \  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
     \ Completed initialization in 1 ms\nremaining time: 0\nremaining time: 0\nremaining\
     \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
     \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
-    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nEnter the\
-    \ api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 0578f5d0-15b6-47cb-8974-78497413e39c\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: fb047d9e-38f5-40aa-89c6-c3c9e71f5577\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 1ada5469-1153-4795-81fd-fdc26cb85475\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 9b6dcffd-c67b-40b9-8123-3fbd8bc0d56b\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 70ddf054-4d9b-46f9-9b54-b27bd8f35e8e\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 7f036c32-6770-4879-8452-531df66e0bc9\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: f4e7fe7a-4f1c-4e27-acb8-a4cf4cd7bb35\n\
-    Enter the api/code/new\nenter code constructor\ncode constructor1\ncode constructor2\n\
-    exit code constructor\nthe new code in the database id: 07e3538f-4b4a-4d00-8a03-a6dc158185ae\n\
-    remaining time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\n\n\
-    \  .   ____          _            __ _ _\n /\\\\ / ___&#39;_ __ _ _(_)_ __  __\
-    \ _ \\ \\ \\ \\\n( ( )\\___ | &#39;_ | &#39;_| | &#39;_ \\/ _` | \\ \\ \\ \\\n\
-    \ \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  &#39;  |____| .__|_| |_|_| |_\\\
-    __, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::  \
-    \              (v2.5.6)\n\n2022-07-22 20:22:48.784  INFO 25112 --- [    Test worker]\
-    \ platform.CodeSharingPlatform             : Starting CodeSharingPlatform using\
-    \ Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 25112 (started by Ansis in C:\\Users\\\
-    Ansis\\Desktop\\maven\\Code Sharing Platform\\Code Sharing Platform\\task)\n2022-07-22\
-    \ 20:22:48.785  INFO 25112 --- [    Test worker] platform.CodeSharingPlatform\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nEnter the api/code/new\nthe new code in the database\
+    \ id: e6c345d2-41c8-482a-9b38-a388b7782225\nEnter the api/code/new\nthe new code\
+    \ in the database id: acbcc8f0-471b-4b21-bda1-49cc517f0a9d\nEnter the api/code/new\n\
+    the new code in the database id: 2b002903-d0dc-47dd-9e72-5413ef2ae815\nEnter the\
+    \ api/code/new\nthe new code in the database id: 91b47fff-d11e-44fe-96d0-2768e04abacb\n\
+    Enter the api/code/new\nthe new code in the database id: 77b9b1b0-9070-43d3-a7dc-146abb5906d8\n\
+    Enter the api/code/new\nthe new code in the database id: 5268d061-8068-4c30-a686-407de90e6c8e\n\
+    Enter the api/code/new\nthe new code in the database id: 8cdc08c6-76db-485c-8608-bf141e74eeaf\n\
+    Enter the api/code/new\nthe new code in the database id: 0d3dda4f-115e-4039-95a2-80c359e64631\n\
+    remaining time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\nremaining\
+    \ time: 0\nremaining time: 0\nremaining time: 0\nremaining time: 0\n2022-07-22\
+    \ 21:22:59.501  INFO 19592 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean\
+    \ : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
+    2022-07-22 21:22:59.502  INFO 19592 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource\
+    \       : HikariPool-2 - Shutdown initiated...\n2022-07-22 21:22:59.506  INFO\
+    \ 19592 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2\
+    \ - Shutdown completed.\n\n  .   ____          _            __ _ _\n /\\\\ / ___&#39;_\
+    \ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | &#39;_ | &#39;_| | &#39;_ \\/\
+    \ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  &#39;  |____|\
+    \ .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n ::\
+    \ Spring Boot ::                (v2.5.6)\n\n2022-07-22 21:22:59.536  INFO 19592\
+    \ --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform\
+    \ using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 19592 (started by Ansis in C:\\\
+    Users\\Ansis\\Desktop\\maven\\Code Sharing Platform\\Code Sharing Platform\\task)\n\
+    2022-07-22 21:22:59.537  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
     \             : No active profile set, falling back to default profiles: default\n\
-    2022-07-22 20:22:49.010  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate\
-    \ : Bootstrapping Spring Data JPA repositories in DEFAULT mode.\n2022-07-22 20:22:49.017\
-    \  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate :\
-    \ Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.\n\
-    2022-07-22 20:22:49.093  INFO 25112 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
-    \  : Tomcat initialized with port(s): 8889 (http)\n2022-07-22 20:22:49.094  INFO\
-    \ 25112 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
-    \ service [Tomcat]\n2022-07-22 20:22:49.094  INFO 25112 --- [    Test worker]\
+    2022-07-22 21:22:59.756  INFO 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate\
+    \ : Bootstrapping Spring Data JPA repositories in DEFAULT mode.\n2022-07-22 21:22:59.761\
+    \  INFO 19592 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate :\
+    \ Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.\n\
+    2022-07-22 21:22:59.822  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \  : Tomcat initialized with port(s): 8889 (http)\n2022-07-22 21:22:59.822  INFO\
+    \ 19592 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
+    \ service [Tomcat]\n2022-07-22 21:22:59.823  INFO 19592 --- [    Test worker]\
     \ org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache\
-    \ Tomcat/9.0.54]\n2022-07-22 20:22:49.119  INFO 25112 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]\
-    \       : Initializing Spring embedded WebApplicationContext\n2022-07-22 20:22:49.119\
-    \  INFO 25112 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
-    \ Root WebApplicationContext: initialization completed in 332 ms\n2022-07-22 20:22:49.146\
-    \  INFO 25112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       :\
-    \ HikariPool-3 - Starting...\n2022-07-22 20:22:49.154  INFO 25112 --- [    Test\
+    \ Tomcat/9.0.54]\n2022-07-22 21:22:59.847  INFO 19592 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \       : Initializing Spring embedded WebApplicationContext\n2022-07-22 21:22:59.847\
+    \  INFO 19592 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
+    \ Root WebApplicationContext: initialization completed in 309 ms\n2022-07-22 21:22:59.874\
+    \  INFO 19592 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       :\
+    \ HikariPool-3 - Starting...\n2022-07-22 21:22:59.882  INFO 19592 --- [    Test\
     \ worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.\n\
-    2022-07-22 20:22:49.155  INFO 25112 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration\
+    2022-07-22 21:22:59.883  INFO 19592 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration\
     \    : H2 console available at &#39;/h2-console&#39;. Database available at &#39;jdbc:h2:file:../snippets&#39;\n\
-    2022-07-22 20:22:49.184  INFO 25112 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper\
-    \  : HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-07-22 20:22:49.189\
-    \  INFO 25112 --- [    Test worker] org.hibernate.dialect.Dialect            :\
-    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 20:22:49.224\
-    \  INFO 25112 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       :\
+    2022-07-22 21:22:59.917  INFO 19592 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper\
+    \  : HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-07-22 21:22:59.923\
+    \  INFO 19592 --- [    Test worker] org.hibernate.dialect.Dialect            :\
+    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\n2022-07-22 21:22:59.960\
+    \  INFO 19592 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       :\
     \ HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]\n\
-    2022-07-22 20:22:49.224  INFO 25112 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
+    2022-07-22 21:22:59.960  INFO 19592 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
     \ : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
-    2022-07-22 20:22:49.271  WARN 25112 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
+    2022-07-22 21:23:00.021  WARN 19592 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
     \ : spring.jpa.open-in-view is enabled by default. Therefore, database queries\
     \ may be performed during view rendering. Explicitly configure spring.jpa.open-in-view\
-    \ to disable this warning\n2022-07-22 20:22:49.305  INFO 25112 --- [    Test worker]\
+    \ to disable this warning\n2022-07-22 21:23:00.082  INFO 19592 --- [    Test worker]\
     \ o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index\n\
-    2022-07-22 20:22:49.405  INFO 25112 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
+    2022-07-22 21:23:00.197  INFO 19592 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver\
     \      : Exposing 14 endpoint(s) beneath base path &#39;/actuator&#39;\n2022-07-22\
-    \ 20:22:49.416  INFO 25112 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \ 21:23:00.211  INFO 19592 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
     \  : Tomcat started on port(s): 8889 (http) with context path &#39;&#39;\n2022-07-22\
-    \ 20:22:49.420  INFO 25112 --- [    Test worker] platform.CodeSharingPlatform\
-    \             : Started CodeSharingPlatform in 0.661 seconds (JVM running for\
-    \ 14.579)\n2022-07-22 20:22:49.426  INFO 25112 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
+    \ 21:23:00.218  INFO 19592 --- [    Test worker] platform.CodeSharingPlatform\
+    \             : Started CodeSharingPlatform in 0.701 seconds (JVM running for\
+    \ 14.291)\n2022-07-22 21:23:00.224  INFO 19592 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]\
     \       : Initializing Spring DispatcherServlet &#39;dispatcherServlet&#39;\n\
-    2022-07-22 20:22:49.427  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
-    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 20:22:49.428\
-    \  INFO 25112 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
-    \ Completed initialization in 1 ms\nremaining time: 94\nremaining time: 0"
-  time: Fri, 22 Jul 2022 17:22:49 UTC
+    2022-07-22 21:23:00.224  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet\
+    \        : Initializing Servlet &#39;dispatcherServlet&#39;\n2022-07-22 21:23:00.226\
+    \  INFO 19592 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        :\
+    \ Completed initialization in 1 ms\nremaining time: 94\nremaining time: 94\nremaining\
+    \ time: 0\nremaining time: 0\ntrying to return 404!!!"
+  time: Fri, 22 Jul 2022 18:23:00 UTC
 record: 5
