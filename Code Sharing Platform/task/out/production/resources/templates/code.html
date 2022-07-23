@@ -10,9 +10,9 @@
 <body>
  <span id="load_date" th:text="${code.getDate()}"/>
  <br>
- <span id="available_views" th:text="${code.getViews()} + ' more views allowed'"/>
+ <span id="views_restriction" th:if="${code.limitedViews()}" th:text="${code.getViews()} + ' more views allowed'"/>
  <br>
- <span id="time_restriction" th:text="'The code will be available for ' + ${code.getTime()} + ' seconds'"/>
+ <span id="time_restriction" th:if="${code.limitedTime()}" th:text="'The code will be available for ' + ${code.getTime()} + ' seconds'"/>
  <pre id="code_snippet"><code th:text="${code.getCode()}"></code></pre>
 </body>
 </html>

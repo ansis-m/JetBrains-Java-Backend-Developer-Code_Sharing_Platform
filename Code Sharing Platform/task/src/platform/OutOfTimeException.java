@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value= HttpStatus.NOT_FOUND, reason="No such Order")
 public class OutOfTimeException extends RuntimeException {
-    System.out.println("Out of time exception!!!");
+
+    {
+        System.out.println("Out of time exception!!!");
+    }
 
 }

@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -63,20 +62,15 @@ public class Code{
         date = LocalDate.now();
     }
 
-
     public Code(CodeInput input) {
-        System.out.println("enter code constructor");
         this.code = input.getCode();
         this.availableTime = Integer.parseInt(input.getTime());
         this.views = Integer.parseInt(input.getViews());
-        System.out.println("code constructor1");
         date = LocalDate.now();
         dateTime = LocalDateTime.now();
         this.limitViews = this.views > 0;
         this.limitTime = this.availableTime > 0;
-        System.out.println("code constructor2");
         this.time = this.availableTime;
-        System.out.println("exit code constructor");
     }
 
     public void setViews(String views) {
