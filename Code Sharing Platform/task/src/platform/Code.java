@@ -44,19 +44,19 @@ public class Code{
 
     @Column
     @JsonIgnore
-    private Integer availableTime;
+    private Integer availableTime; //initially available time
 
     @Column
-    private Integer time;
+    private Integer time; //remaining time. to update need to call this.remainingTime()
 
-
-    @Column
-    @JsonIgnore
-    private boolean limitTime;
 
     @Column
     @JsonIgnore
-    private boolean limitViews;
+    private boolean limitTime; //indicator showing if time is limited
+
+    @Column
+    @JsonIgnore
+    private boolean limitViews; //indicator showing if views are limited
 
     public Code() {
         date = LocalDate.now();

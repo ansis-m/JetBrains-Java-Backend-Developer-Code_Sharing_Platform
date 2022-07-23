@@ -9,39 +9,38 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::                (v2.5.6)
 
-ö2022-07-23 10:19:55.915  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 25344 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
-¶2022-07-23 10:19:55.918  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
-°2022-07-23 10:19:56.873  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-ª2022-07-23 10:19:56.930  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
-í2022-07-23 10:19:57.454  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2022-07-23 10:19:57.465  INFO 25344 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2022-07-23 10:19:57.465  INFO 25344 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-ò2022-07-23 10:19:57.559  INFO 25344 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-•2022-07-23 10:19:57.559  INFO 25344 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1601 ms
-Ä2022-07-23 10:19:57.675  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-Ö2022-07-23 10:19:57.857  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-Ω2022-07-23 10:19:57.866  INFO 25344 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
-ü2022-07-23 10:19:58.051  INFO 25344 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ò2022-07-23 10:19:58.103  INFO 25344 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-û2022-07-23 10:19:58.266  INFO 25344 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-ü2022-07-23 10:19:58.384  INFO 25344 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-Ÿ2022-07-23 10:19:58.972  INFO 25344 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-©2022-07-23 10:19:58.980  INFO 25344 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-ù2022-07-23 10:19:59.279  WARN 25344 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-â2022-07-23 10:19:59.469  INFO 25344 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-õ2022-07-23 10:19:59.890  INFO 25344 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-°2022-07-23 10:19:59.923  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-™2022-07-23 10:19:59.942  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 4.359 seconds (JVM running for 4.988)
-ü2022-07-23 10:20:00.261  INFO 25344 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2022-07-23 10:20:00.261  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2022-07-23 10:20:00.263  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+ö2022-07-23 10:45:39.179  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 16332 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
+¶2022-07-23 10:45:39.182  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+°2022-07-23 10:45:40.152  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ª2022-07-23 10:45:40.200  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+í2022-07-23 10:45:40.713  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-23 10:45:40.724  INFO 16332 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2022-07-23 10:45:40.724  INFO 16332 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+ò2022-07-23 10:45:40.819  INFO 16332 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+•2022-07-23 10:45:40.820  INFO 16332 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1594 ms
+Ä2022-07-23 10:45:40.949  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Ö2022-07-23 10:45:41.117  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Ω2022-07-23 10:45:41.124  INFO 16332 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+ü2022-07-23 10:45:41.328  INFO 16332 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ò2022-07-23 10:45:41.382  INFO 16332 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+û2022-07-23 10:45:41.550  INFO 16332 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ü2022-07-23 10:45:41.698  INFO 16332 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ÿ2022-07-23 10:45:42.312  INFO 16332 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-07-23 10:45:42.319  INFO 16332 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù2022-07-23 10:45:42.633  WARN 16332 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+â2022-07-23 10:45:42.835  INFO 16332 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+õ2022-07-23 10:45:43.293  INFO 16332 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2022-07-23 10:45:43.340  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+™2022-07-23 10:45:43.356  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 4.538 seconds (JVM running for 5.167)
+ü2022-07-23 10:45:43.663  INFO 16332 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2022-07-23 10:45:43.663  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2022-07-23 10:45:43.665  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 [1;31m
 Start test 2[0m
 Enter the api/code/new
-Gthe new code in the database id: e66805c0-b14f-4c1e-95f7-b3a40cbd12e6
+Gthe new code in the database id: cc2dd466-9e1b-48df-adc4-d2e3555030db
 [1;31m
 Start test 3[0m
-remaining time: 0
 [1;31m
 Start test 4[0m
 [1;31m
@@ -51,15 +50,13 @@
 [1;31m
 Start test 7[0m
 Enter the api/code/new
-Gthe new code in the database id: be7b9efa-bef2-4dae-bff2-fa094d9b4c14
+Gthe new code in the database id: bd059f6c-623b-4a70-87f0-9fe24f5c8c49
 [1;31m
 Start test 8[0m
-remaining time: 0
 [1;31m
 Start test 9[0m
 [1;31m
 Start test 10[0m
-remaining time: 0
 [1;31m
 Start test 11[0m
 [1;31m
@@ -69,119 +66,105 @@
 [1;31m
 Start test 14[0m
 Enter the api/code/new
-Gthe new code in the database id: d97da2c0-a87d-4da3-ab76-7ea542b081c1
+Gthe new code in the database id: 7241922e-8513-4443-9818-42fcc6d0273e
 [1;31m
 Start test 15[0m
 Enter the api/code/new
-Gthe new code in the database id: fbd52b62-873a-4e43-89b3-dd315c3e5ea5
+Gthe new code in the database id: 59050e49-8a4b-4725-b139-a94140b77f6b
 [1;31m
 Start test 16[0m
 Enter the api/code/new
-Gthe new code in the database id: e5535f8e-12ca-4efb-9187-a26c11e9590c
+Gthe new code in the database id: 34d594dc-bc20-4c70-877e-b6107ee712f5
 [1;31m
 Start test 17[0m
 Enter the api/code/new
-Gthe new code in the database id: d0b4d7b8-8780-4109-a3e4-a5c37a94f952
+Gthe new code in the database id: c748e626-8327-473f-bf80-8406ab76fe98
 [1;31m
 Start test 18[0m
 Enter the api/code/new
-Gthe new code in the database id: 7da58492-9d23-4d8d-b530-a916d0478eba
+Gthe new code in the database id: 21c024c8-02f2-4d9d-abe8-3c144ebb0bfe
 [1;31m
 Start test 19[0m
 Enter the api/code/new
-Gthe new code in the database id: 742abab1-7425-47ec-acaa-2aa94b4d11eb
+Gthe new code in the database id: 4448cc14-e453-4aa7-a983-514caf02047b
 [1;31m
 Start test 20[0m
 Enter the api/code/new
-Gthe new code in the database id: 4f55c9e8-e7cf-4642-8475-f5bf06705a5d
+Gthe new code in the database id: 10934c1b-3d1c-45ef-87ab-f4f83b32c8ff
 [1;31m
 Start test 21[0m
 Enter the api/code/new
-Gthe new code in the database id: 63a6bbfb-5bb2-43fa-aeb2-29bd1feaea82
+Gthe new code in the database id: df606ec1-b06f-46b6-b740-fe723adc1c4d
 [1;31m
 Start test 22[0m
 Enter the api/code/new
-Gthe new code in the database id: 72db0ae8-97ba-4ce9-9d83-3cc10e2384da
+Gthe new code in the database id: 0e79b044-8742-448f-aa26-cc471a086d86
 [1;31m
 Start test 23[0m
 Enter the api/code/new
-Gthe new code in the database id: eb458be1-bccd-4f3d-bff8-e60b79ddb3df
+Gthe new code in the database id: 2e28cf6c-8494-4f0d-b49c-cad5c2a9a36c
 [1;31m
 Start test 24[0m
 Enter the api/code/new
-Gthe new code in the database id: f7470b50-4af6-4ed6-82c3-1cff622b3e51
+Gthe new code in the database id: 8611b96d-104d-4013-b113-de2b130dd602
 [1;31m
 Start test 25[0m
 Enter the api/code/new
-Gthe new code in the database id: 21e9d707-cbc2-491f-b044-fe19b569dae8
+Gthe new code in the database id: 1852c126-0395-4131-9e75-3fe9b6e13905
 [1;31m
 Start test 26[0m
-remaining time: 0
 [1;31m
 Start test 27[0m
 [1;31m
 Start test 28[0m
-remaining time: 0
 [1;31m
 Start test 29[0m
 [1;31m
 Start test 30[0m
-remaining time: 0
 [1;31m
 Start test 31[0m
 [1;31m
 Start test 32[0m
-remaining time: 0
 [1;31m
 Start test 33[0m
 [1;31m
 Start test 34[0m
-remaining time: 0
 [1;31m
 Start test 35[0m
 [1;31m
 Start test 36[0m
-remaining time: 0
 [1;31m
 Start test 37[0m
 [1;31m
 Start test 38[0m
-remaining time: 0
 [1;31m
 Start test 39[0m
 [1;31m
 Start test 40[0m
-remaining time: 0
 [1;31m
 Start test 41[0m
 [1;31m
 Start test 42[0m
-remaining time: 0
 [1;31m
 Start test 43[0m
 [1;31m
 Start test 44[0m
-remaining time: 0
 [1;31m
 Start test 45[0m
 [1;31m
 Start test 46[0m
-remaining time: 0
 [1;31m
 Start test 47[0m
 [1;31m
 Start test 48[0m
-remaining time: 0
 [1;31m
 Start test 49[0m
 [1;31m
 Start test 50[0m
-remaining time: 0
 [1;31m
 Start test 51[0m
 [1;31m
 Start test 52[0m
-remaining time: 0
 [1;31m
 Start test 53[0m
 [1;31m
@@ -190,9 +173,9 @@
 Start test 55[0m
 [1;31m
 Start test 56[0m
-•2022-07-23 10:20:02.027  INFO 25344 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-ä2022-07-23 10:20:02.029  INFO 25344 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-à2022-07-23 10:20:02.038  INFO 25344 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+•2022-07-23 10:45:45.451  INFO 16332 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+ä2022-07-23 10:45:45.452  INFO 16332 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+à2022-07-23 10:45:45.463  INFO 16332 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
 )  .   ____          _            __ _ _
 * /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -202,98 +185,84 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::                (v2.5.6)
 
-ö2022-07-23 10:20:02.085  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 25344 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
-¶2022-07-23 10:20:02.085  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
-°2022-07-23 10:20:02.369  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-∫2022-07-23 10:20:02.375  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
-í2022-07-23 10:20:02.465  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2022-07-23 10:20:02.466  INFO 25344 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2022-07-23 10:20:02.466  INFO 25344 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-ò2022-07-23 10:20:02.495  INFO 25344 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-§2022-07-23 10:20:02.495  INFO 25344 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 408 ms
-Ä2022-07-23 10:20:02.525  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-Ö2022-07-23 10:20:02.537  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-Ω2022-07-23 10:20:02.538  INFO 25344 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
-ü2022-07-23 10:20:02.568  INFO 25344 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ü2022-07-23 10:20:02.576  INFO 25344 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-Ÿ2022-07-23 10:20:02.628  INFO 25344 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-©2022-07-23 10:20:02.629  INFO 25344 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-ù2022-07-23 10:20:02.705  WARN 25344 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-â2022-07-23 10:20:02.765  INFO 25344 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-õ2022-07-23 10:20:02.900  INFO 25344 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-°2022-07-23 10:20:02.919  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-™2022-07-23 10:20:02.925  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 0.874 seconds (JVM running for 7.972)
+ö2022-07-23 10:45:45.595  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 16332 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
+¶2022-07-23 10:45:45.596  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+°2022-07-23 10:45:45.863  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∫2022-07-23 10:45:45.869  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+í2022-07-23 10:45:45.944  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-23 10:45:45.946  INFO 16332 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2022-07-23 10:45:45.946  INFO 16332 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+ò2022-07-23 10:45:45.975  INFO 16332 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+§2022-07-23 10:45:45.975  INFO 16332 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 376 ms
+Ä2022-07-23 10:45:46.006  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+Ö2022-07-23 10:45:46.019  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+Ω2022-07-23 10:45:46.019  INFO 16332 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+ü2022-07-23 10:45:46.060  INFO 16332 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ü2022-07-23 10:45:46.067  INFO 16332 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ÿ2022-07-23 10:45:46.112  INFO 16332 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-07-23 10:45:46.113  INFO 16332 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù2022-07-23 10:45:46.186  WARN 16332 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+â2022-07-23 10:45:46.234  INFO 16332 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+õ2022-07-23 10:45:46.368  INFO 16332 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2022-07-23 10:45:46.382  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+™2022-07-23 10:45:46.388  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 0.822 seconds (JVM running for 8.199)
 [1;31m
 Start test 57[0m
-ü2022-07-23 10:20:02.935  INFO 25344 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2022-07-23 10:20:02.935  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2022-07-23 10:20:02.936  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-remaining time: 0
+ü2022-07-23 10:45:46.395  INFO 16332 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2022-07-23 10:45:46.395  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2022-07-23 10:45:46.397  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 [1;31m
 Start test 58[0m
 [1;31m
 Start test 59[0m
-remaining time: 0
 [1;31m
 Start test 60[0m
 [1;31m
 Start test 61[0m
-remaining time: 0
 [1;31m
 Start test 62[0m
 [1;31m
 Start test 63[0m
-remaining time: 0
 [1;31m
 Start test 64[0m
 [1;31m
 Start test 65[0m
-remaining time: 0
 [1;31m
 Start test 66[0m
 [1;31m
 Start test 67[0m
-remaining time: 0
 [1;31m
 Start test 68[0m
 [1;31m
 Start test 69[0m
-remaining time: 0
 [1;31m
 Start test 70[0m
 [1;31m
 Start test 71[0m
-remaining time: 0
 [1;31m
 Start test 72[0m
 [1;31m
 Start test 73[0m
-remaining time: 0
 [1;31m
 Start test 74[0m
 [1;31m
 Start test 75[0m
-remaining time: 0
 [1;31m
 Start test 76[0m
 [1;31m
 Start test 77[0m
-remaining time: 0
 [1;31m
 Start test 78[0m
 [1;31m
 Start test 79[0m
-remaining time: 0
 [1;31m
 Start test 80[0m
 [1;31m
 Start test 81[0m
-remaining time: 0
 [1;31m
 Start test 82[0m
 [1;31m
 Start test 83[0m
-remaining time: 0
 [1;31m
 Start test 84[0m
 [1;31m
@@ -303,53 +272,49 @@
 [1;31m
 Start test 87[0m
 Enter the api/code/new
-Gthe new code in the database id: 3485766b-c9c5-4100-8e6a-5e605e90279e
+Gthe new code in the database id: f5709a06-1f0d-4ad2-93b0-7575854e9b6b
 [1;31m
 Start test 88[0m
 Enter the api/code/new
-Gthe new code in the database id: f7722c55-62cc-4fe9-a5de-2371a1983088
+Gthe new code in the database id: fbc2a041-9cf8-4299-89f4-cd8e86ecf17c
 [1;31m
 Start test 89[0m
 Enter the api/code/new
-Gthe new code in the database id: beba36e6-5622-4ec6-81ea-3b845ae1308a
+Gthe new code in the database id: 84513e64-70bd-4f2c-bff1-7e7c79034674
 [1;31m
 Start test 90[0m
 Enter the api/code/new
-Gthe new code in the database id: ee282d43-6765-4331-8081-76a6c362ab4b
+Gthe new code in the database id: eabd491c-b8b3-4537-be51-837f2f031671
 [1;31m
 Start test 91[0m
 Enter the api/code/new
-Gthe new code in the database id: 6c3e42d1-5e06-4b0b-bff5-9642d0e17488
+Gthe new code in the database id: 08500920-150b-4598-99a9-3e7fddc4fd81
 [1;31m
 Start test 92[0m
 Enter the api/code/new
-Gthe new code in the database id: 7260c8ef-3a0c-464b-afb0-f1c7386f7583
+Gthe new code in the database id: ebb26445-a442-49fb-b436-810684db0009
 [1;31m
 Start test 93[0m
 Enter the api/code/new
-Gthe new code in the database id: 2f7f38bc-b7b3-48c4-beed-c623557af1fa
+Gthe new code in the database id: 1ffcf143-c32a-4f55-b9e2-b8ce1ab86f06
 [1;31m
 Start test 94[0m
 Enter the api/code/new
-Gthe new code in the database id: 8e202a28-ed41-4855-a051-79eb357dda80
+Gthe new code in the database id: 1f080101-3e38-4554-bbca-66726f253d15
 [1;31m
 Start test 95[0m
-remaining time: 0
 [1;31m
 Start test 96[0m
 [1;31m
 Start test 97[0m
-remaining time: 0
 [1;31m
 Start test 98[0m
 [1;31m
 Start test 99[0m
-remaining time: 0
 [1;31m
 Start test 100[0m
 [1;31m
 Start test 101[0m
-remaining time: 0
 [1;31m
 Start test 102[0m
 [1;31m
@@ -363,40 +328,38 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::                (v2.5.6)
 
-ö2022-07-23 10:20:08.968  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 25344 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
-¶2022-07-23 10:20:08.969  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
-°2022-07-23 10:20:09.178  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-∫2022-07-23 10:20:09.184  INFO 25344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
-í2022-07-23 10:20:09.245  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-2022-07-23 10:20:09.246  INFO 25344 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2022-07-23 10:20:09.246  INFO 25344 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-ò2022-07-23 10:20:09.269  INFO 25344 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-§2022-07-23 10:20:09.269  INFO 25344 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 298 ms
-Ä2022-07-23 10:20:09.300  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-Ö2022-07-23 10:20:09.311  INFO 25344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-Ω2022-07-23 10:20:09.311  INFO 25344 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
-ü2022-07-23 10:20:09.337  INFO 25344 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ü2022-07-23 10:20:09.344  INFO 25344 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-Ÿ2022-07-23 10:20:09.378  INFO 25344 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-©2022-07-23 10:20:09.378  INFO 25344 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-ù2022-07-23 10:20:09.423  WARN 25344 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-â2022-07-23 10:20:09.456  INFO 25344 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-õ2022-07-23 10:20:09.549  INFO 25344 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-°2022-07-23 10:20:09.560  INFO 25344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-´2022-07-23 10:20:09.566  INFO 25344 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 0.621 seconds (JVM running for 14.612)
+ö2022-07-23 10:45:52.338  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform using Java 17.0.3 on LAPTOP-VBFHQFG2 with PID 16332 (started by Ansis in C:\Users\Ansis\Desktop\maven\Code Sharing Platform\Code Sharing Platform\task)
+¶2022-07-23 10:45:52.338  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+°2022-07-23 10:45:52.552  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∫2022-07-23 10:45:52.558  INFO 16332 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+í2022-07-23 10:45:52.622  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2022-07-23 10:45:52.623  INFO 16332 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2022-07-23 10:45:52.623  INFO 16332 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+ò2022-07-23 10:45:52.648  INFO 16332 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+§2022-07-23 10:45:52.648  INFO 16332 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 308 ms
+Ä2022-07-23 10:45:52.673  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+Ö2022-07-23 10:45:52.682  INFO 16332 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+Ω2022-07-23 10:45:52.683  INFO 16332 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+ü2022-07-23 10:45:52.711  INFO 16332 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ü2022-07-23 10:45:52.718  INFO 16332 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ÿ2022-07-23 10:45:52.753  INFO 16332 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-07-23 10:45:52.753  INFO 16332 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù2022-07-23 10:45:52.807  WARN 16332 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+â2022-07-23 10:45:52.844  INFO 16332 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+õ2022-07-23 10:45:52.936  INFO 16332 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2022-07-23 10:45:52.947  INFO 16332 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+´2022-07-23 10:45:52.955  INFO 16332 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 0.641 seconds (JVM running for 14.765)
 [1;31m
 Start test 104[0m
 [1;31m
 Start test 105[0m
-ü2022-07-23 10:20:09.573  INFO 25344 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2022-07-23 10:20:09.573  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2022-07-23 10:20:09.574  INFO 25344 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-remaining time: 94
+ü2022-07-23 10:45:52.961  INFO 16332 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2022-07-23 10:45:52.961  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2022-07-23 10:45:52.962  INFO 16332 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 [1;31m
 Start test 106[0m
 [1;31m
 Start test 107[0m
-remaining time: 0
 [1;31m
 Start test 108[0m
 [1;31m
@@ -406,7 +369,6 @@
 Out of time exception!!!
 [1;31m
 Start test 111[0m
-remaining time: 24
 [1;31m
 Start test 112[0m
 [1;31m
@@ -415,15 +377,12 @@
 Start test 114[0m
 [1;31m
 Start test 115[0m
-remaining time: 0
 [1;31m
 Start test 116[0m
-remaining time: 0
 [1;31m
 Start test 117[0m
 [1;31m
 Start test 118[0m
-remaining time: 0
 [1;31m
 Start test 119[0m
 Out of Views exception!!!

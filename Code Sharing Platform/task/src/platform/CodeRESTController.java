@@ -4,11 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -27,15 +23,13 @@ public class CodeRESTController {
     public ResponseEntity getJSON(@PathVariable String id){
 
         if(id.equals("latest")) {
-            List<Code> result = codeService.getLatest();
-            return new ResponseEntity(result, HttpStatus.OK);
+            return new ResponseEntity(codeService.getLatest(), HttpStatus.OK);
         }
         else {
             try {
                 Code code = codeService.findById(UUID.fromString(id));
                 if(code.limitedTime() && code.remainingTime() < 0)
                     return new ResponseEntity(HttpStatus.NOT_FOUND);
-                System.out.println("remaining time: " + code.getTime());
                 if(code.limitedViews() && code.getViews() >= 0) {
                     code.view();
                     codeService.save(code);

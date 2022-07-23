@@ -21,7 +21,6 @@ public class CodeServiceImpl implements CodeService{
     @Override
     @Transactional
     public List<Code> getAll() {
-
         return codeRepository.findAll();
     }
 
@@ -34,13 +33,6 @@ public class CodeServiceImpl implements CodeService{
         if (i >= 11) {
             codeList = codeList.subList(i - 10, i);
         }
-        //not sure if necessary to decrement in case a list is viewed
-//        for(Code c : codeList) {
-//            if(c.limitedViews()){
-//                c.view();
-//                codeRepository.save(c);
-//            }
-//        }
         Collections.reverse(codeList);
         return codeList;
     }
@@ -61,6 +53,5 @@ public class CodeServiceImpl implements CodeService{
     @Transactional
     public void deleteById(UUID id) {
         codeRepository.deleteById(id);
-
     }
 }

@@ -32,8 +32,10 @@ public class CodeHTMLController {
         }
         else {
                 Code code = codeService.findById(UUID.fromString(id));
+                //return 404 when you run out of time
                 if(code.limitedTime() && code.remainingTime() < 0)
                     throw new OutOfTimeException();
+                //decrement the views (when applicable)
                 if(code.limitedViews() && code.getViews() >= 0) {
                     code.view();
                     codeService.save(code);
@@ -42,6 +44,7 @@ public class CodeHTMLController {
                     model.addAttribute("code", code);
                     return "code";
                 }
+                //return 404 when you run out of views
                 else if (code.getViews() <= 0 || code.limitedViews())
                     throw new OutOfViewsException();
         }
